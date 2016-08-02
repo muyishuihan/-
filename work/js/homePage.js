@@ -1,3 +1,33 @@
+//封装
+function addClass(element, classname) {  //添加class  （元素， class的字符串）
+
+	element.className += " " + classname;
+
+}
+function removeClass(element, classname) { //删除class	（元素， class的字符串）
+
+	var regular       = new RegExp(' ' + '(' + classname +'' + ')*')
+
+	element.className = element.className.replace(regular, "");
+
+}
+function hasClass(element, index) {  //检测class中是否有要检测的class （元素， 要检测class的字符串）
+
+	if (element.className.indexOf(index) != -1) {  //没有函数就返回true
+
+		return true;
+
+	}else{		//有就返回false
+
+		return false;
+
+	}
+
+}
+var getStyle = function(dom,attr){
+    return dom.currentStyle ? dom.currentStyle[attr] : getComputedStyle(dom, false)[attr];
+}
+
 //回到顶部
 var backTop = document.querySelector(".back"); //回顶按钮
 	backTop.addEventListener("click", function(){
@@ -5,59 +35,36 @@ var backTop = document.querySelector(".back"); //回顶按钮
 		document.body.scrollTop = 0;
 	})
 
-//滚动倒计时
-var day_l = document.querySelector(".day-l");
-	day_r = document.querySelector(".day-r");
-	hour_1 = document.querySelector(".hour-l");
-	hour_r = document.querySelector(".hour-r");
-	min_1 = document.querySelector(".min-l");
-	min_r = document.querySelector(".min-r");
-	sec_1 = document.querySelector(".sec-l");
-	sec_r = document.querySelector(".sec-r");
+var tt = 500;
+	back = document.querySelector(".back");
+	fix_l = document.querySelector(".fix-l")
+	fix_r = document.querySelector(".fix-r");
 
-	// dayNew = timeNew.getDay();
-	// hourNew = timeNew.getHours();
-	// minNew = timeNew.getMinutes();
 
-function change(event, num){
-	if (num == 0) {
-		event.style.top = 0 + "px";
-	}
-	if (num == 1) {
-		event.style.top = -36 + "px";
-	}
-	if (num == 2) {
-		event.style.top = -73 + "px";
-	}
-	if (num == 3) {
-		event.style.top = -110 + "px";
-	}
-	if (num == 4) {
-		event.style.top = -147 + "px";
-	}
-	if (num == 5) {
-		event.style.top = -183 + "px";
-	}
-	if (num == 6) {
-		event.style.top = -220 + "px";
-	}
-	if (num == 7) {
-		event.style.top = -257 + "px";
-	}
-	if (num == 8) {
-		event.style.top = -293 + "px";
-	}
-	if (num == 9) {
-		event.style.top = -330 + "px";
-	}
+window.onscroll = function(){
+    var t = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if(t < tt && getStyle(back,"opacity")!="0"){
+        back.style.opacity="0";
+    }else if(t > tt && getStyle(back,"opacity")=="0"){
+        back.style.opacity="1";
+    }else{
+        return false;
+    }
+
+    if(t < 1500 && getStyle(fix_l,"opacity")!="1"){
+        fix_l.style.opacity="1";
+    }else if(t > tt && getStyle(fix_l,"opacity")=="1"){
+        fix_l.style.opacity="0";
+    }else{
+        return false;
+    }
+
+    if(t < 1500 && getStyle(fix_r,"opacity")!="1"){
+        fix_r.style.opacity="1";
+    }else if(t > tt && getStyle(fix_r,"opacity")=="1"){
+        fix_r.style.opacity="0";
+    }else{
+        return false;
+    }
 }
-
-function secChange(){
-	var timeNew = new Date();
-		sec = timeNew.getSeconds();
-	secL = parseInt((sec%100)/10);
-	secR = sec%10;
-	change(sec_1, secL);
-	change(sec_r, secR);
-}
-secChange();

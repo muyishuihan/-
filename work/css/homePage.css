@@ -138,19 +138,49 @@ a {
   top: 50%;
   left: 15px;
   margin-top: -166px;
-  z-index: -2;
+  z-index: 4;
   animation: airL 2s infinite;
   animation-iteration-count: 1;
+  opacity: 1;
+  transition: opacity 1s;
 }
 @keyframes airL {
   from {
     left: -200px;
   }
 }
+.airL-dis {
+  animation: air_d 2s infinite;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+@keyframes air_d {
+  from {
+    opacity: 1;
+  }
+}
 .air-l {
   position: relative;
   left: -15px;
   top: 10px;
+}
+.air-l-write {
+  width: 143px;
+  height: 171px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: #ffb464;
+  font-family: "Microsoft YaHei";
+}
+.phone-write {
+  font-size: 24px;
+  text-align: center;
+}
+.download {
+  position: absolute;
+  bottom: 10px;
+  font-size: 18px;
 }
 .fix-r {
   width: 162px;
@@ -159,19 +189,45 @@ a {
   top: 50%;
   right: 5px;
   margin-top: -166px;
-  z-index: -2;
+  z-index: 4;
   animation: airR 2s infinite;
   animation-iteration-count: 1;
+  opacity: 1;
+  transition: opacity 1s;
 }
 @keyframes airR {
   from {
     right: -200px;
   }
 }
+.airR-dis {
+  animation: air_d 2s infinite;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
 .air-r {
   position: relative;
   right: -30px;
   top: 10px;
+}
+.air-r-write {
+  width: 143px;
+  height: 171px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-family: "Microsoft YaHei";
+  color: #66c5d3;
+}
+.wx-write {
+  font-size: 24px;
+  text-align: center;
+}
+.see {
+  position: absolute;
+  bottom: 10px;
+  font-size: 18px;
+  left: 5px;
 }
 .map {
   width: 1031px;
@@ -308,6 +364,7 @@ a {
   line-height: 20px;
   width: 465px;
   margin: 0 auto;
+  color: #666666;
 }
 .place-name {
   width: 97px;
@@ -414,6 +471,7 @@ a {
   font-family: "Microsoft YaHei";
   font-size: 14px;
   line-height: 25px;
+  color: #666666;
 }
 .know-b {
   width: 185px;
@@ -514,6 +572,7 @@ a {
   font-family: "Microsoft YaHei";
   font-size: 14px;
   line-height: 25px;
+  color: #666666;
 }
 .know-d {
   width: 185px;
@@ -614,6 +673,7 @@ a {
   font-family: "Microsoft YaHei";
   font-size: 14px;
   line-height: 25px;
+  color: #666666;
 }
 .know-h {
   width: 185px;
@@ -694,6 +754,7 @@ a {
   line-height: 25px;
   font-family: "Microsoft YaHei";
   font-size: 14px;
+  color: #666666;
 }
 .stu-know {
   width: 185px;
@@ -766,6 +827,7 @@ a {
   line-height: 25px;
   font-family: "Microsoft YaHei";
   font-size: 14px;
+  color: #666666;
 }
 .we-know {
   width: 185px;
@@ -790,12 +852,13 @@ a {
 .back {
   width: 114px;
   height: 112px;
-  margin-right: 31px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  position: relative;
-  float: right;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
   cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .backTop {
   position: absolute;
@@ -814,6 +877,9 @@ a {
   width: 100%;
   height: 177px;
   background-color: #fffde7;
+  font-family: "Microsoft YaHei";
+  position: relative;
+  top: 172px;
 }
 .end-con {
   width: 730px;
