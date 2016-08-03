@@ -1,6 +1,7 @@
 //封装
 function addClass(element, classname) {  //添加class  （元素， class的字符串）
 
+<<<<<<< HEAD
     element.className += " " + classname;
 
 }
@@ -9,10 +10,21 @@ function removeClass(element, classname) { //删除class    （元素， class�
     var regular       = new RegExp(' ' + '(' + classname +'' + ')*')
 
     element.className = element.className.replace(regular, "");
+=======
+	element.className += " " + classname;
+
+}
+function removeClass(element, classname) { //删除class	（元素， class的字符串）
+
+	var regular       = new RegExp(' ' + '(' + classname +'' + ')*')
+
+	element.className = element.className.replace(regular, "");
+>>>>>>> 10ced4abb89f5477d02ec6a7c1d83c2e74abb6ea
 
 }
 function hasClass(element, index) {  //检测class中是否有要检测的class （元素， 要检测class的字符串）
 
+<<<<<<< HEAD
     if (element.className.indexOf(index) != -1) {  //没有函数就返回true
 
         return true;
@@ -22,6 +34,17 @@ function hasClass(element, index) {  //检测class中是否有要检测的class 
         return false;
 
     }
+=======
+	if (element.className.indexOf(index) != -1) {  //没有函数就返回true
+
+		return true;
+
+	}else{		//有就返回false
+
+		return false;
+
+	}
+>>>>>>> 10ced4abb89f5477d02ec6a7c1d83c2e74abb6ea
 
 }
 var getStyle = function(dom,attr){
@@ -30,6 +53,7 @@ var getStyle = function(dom,attr){
 
 //回到顶部
 var backTop = document.querySelector(".back"); //回顶按钮
+<<<<<<< HEAD
     backTop.addEventListener("click", function(){
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
@@ -42,6 +66,19 @@ var tt = 500;
 
 
 //飞机和回顶的隐藏
+=======
+	backTop.addEventListener("click", function(){
+		document.documentElement.scrollTop = 0;
+		document.body.scrollTop = 0;
+	})
+
+var tt = 500;
+	back = document.querySelector(".back");
+	fix_l = document.querySelector(".fix-l")
+	fix_r = document.querySelector(".fix-r");
+
+
+>>>>>>> 10ced4abb89f5477d02ec6a7c1d83c2e74abb6ea
 window.onscroll = function(){
     var t = document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -70,6 +107,7 @@ window.onscroll = function(){
     }
 }
 
+<<<<<<< HEAD
 var day_l = document.querySelector(".day-l");
     day_r = document.querySelector(".day-r");
     hour_1 = document.querySelector(".hour-l");
@@ -213,6 +251,8 @@ function dayChange() {
 }
 setTimeout(dayChange, 1000);
 
+=======
+>>>>>>> 10ced4abb89f5477d02ec6a7c1d83c2e74abb6ea
 //详细资料的开与关
 var open = document.querySelector("#old-lib"),
   close = document.querySelector(".close"),
