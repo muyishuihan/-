@@ -127,7 +127,7 @@ a {
   position: relative;
 }
 .hour {
-  margin-left: 57px;
+  margin-left: 56px;
 }
 .min {
   margin-left: 62px;
@@ -395,9 +395,8 @@ a {
   text-align: center;
   font-size: 18px;
   font-family: "Microsoft YaHei";
-  display: none;
 }
-.position {
+#old-pos {
   position: absolute;
   top: 280px;
   left: 520px;
@@ -405,8 +404,63 @@ a {
 }
 #old-lib {
   position: absolute;
-  top: 348px;
-  left: 488px;
+  top: 280px;
+  left: 560px;
+}
+#taiJi-pos {
+  position: absolute;
+  top: 120px;
+  left: 396px;
+  cursor: pointer;
+}
+#tai-ji {
+  position: absolute;
+  top: 100px;
+  left: 430px;
+}
+#oldDoor-pos {
+  position: absolute;
+  top: 410px;
+  left: 370px;
+  cursor: pointer;
+}
+#old-door {
+  position: absolute;
+  top: 450px;
+  left: 280px;
+}
+#newDoor-pos {
+  position: absolute;
+  top: 370px;
+  left: 220px;
+  cursor: pointer;
+}
+#new-door {
+  position: absolute;
+  top: 420px;
+  left: 140px;
+}
+#windRain-pos {
+  position: absolute;
+  top: 180px;
+  left: 290px;
+  cursor: pointer;
+}
+#wind-rain {
+  position: absolute;
+  top: 240px;
+  left: 240px;
+}
+#newLib-pos {
+  position: absolute;
+  top: 310px;
+  left: 270px;
+  cursor: pointer;
+}
+#new-lib {
+  position: absolute;
+  top: 310px;
+  left: 310px;
 }
 .news {
   width: 1031px;
@@ -484,6 +538,12 @@ a {
   top: 50%;
   margin-left: -40px;
   margin-top: -42px;
+  transition-duration: 0.7s;
+}
+.book-datails:hover .book-p,
+.house-datails:hover .house-p,
+.data-datails:hover .data-p {
+  transform: rotate(45deg);
 }
 .book-write {
   width: 250px;
@@ -508,6 +568,7 @@ a {
   border-radius: 25px;
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
+  box-shadow: -7px -7px #13c3bb inset;
 }
 .know-b:hover {
   background: linear-gradient(#13c3bb, #1ddbda);
@@ -585,6 +646,7 @@ a {
   top: 50%;
   margin-left: -40px;
   margin-top: -42px;
+  transition-duration: 0.7s;
 }
 .data-write {
   width: 250px;
@@ -609,6 +671,7 @@ a {
   border-radius: 25px;
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
+  box-shadow: -7px -7px #13c3bb inset;
 }
 .know-d:hover {
   background: linear-gradient(#13c3bb, #1ddbda);
@@ -686,6 +749,7 @@ a {
   top: 50%;
   margin-left: -40px;
   margin-top: -42px;
+  transition-duration: 0.7s;
 }
 .house-write {
   width: 250px;
@@ -710,6 +774,7 @@ a {
   border-radius: 25px;
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
+  box-shadow: -7px -7px #13c3bb inset;
 }
 .know-h:hover {
   background: linear-gradient(#13c3bb, #1ddbda);
@@ -788,9 +853,10 @@ a {
   font-family: "Microsoft YaHei";
   border-radius: 25px;
   float: right;
-  margin-top: 28px;
+  margin-top: 17px;
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
+  box-shadow: -7px -7px #13c3bb inset;
 }
 .stu-know:hover {
   background: linear-gradient(#13c3bb, #1ddbda);
@@ -861,9 +927,10 @@ a {
   font-family: "Microsoft YaHei";
   border-radius: 25px;
   float: right;
-  margin-top: 28px;
+  margin-top: 17px;
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
+  box-shadow: -7px -7px #13c3bb inset;
 }
 .we-know:hover {
   background: linear-gradient(#13c3bb, #1ddbda);

@@ -57,34 +57,21 @@ var backTop = document.querySelector(".back"); //回顶按钮
         document.body.scrollTop = 0;
     })
 
-var tt = 500;
-    back = document.querySelector(".back");
-    fix_l = document.querySelector(".fix-l")
-    fix_r = document.querySelector(".fix-r");
-
-
 
 
 
 //飞机和回顶的隐藏
-	backTop.addEventListener("click", function(){
-		document.documentElement.scrollTop = 0;
-		document.body.scrollTop = 0;
-	})
-
 var tt = 500;
-	back = document.querySelector(".back");
-	fix_l = document.querySelector(".fix-l")
-	fix_r = document.querySelector(".fix-r");
-
+    fix_l = document.querySelector(".fix-l")
+    fix_r = document.querySelector(".fix-r");
 
 window.onscroll = function(){
     var t = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if(t < tt && getStyle(back,"opacity")!="0"){
-        back.style.opacity="0";
-    }else if(t > tt && getStyle(back,"opacity")=="0"){
-        back.style.opacity="1";
+    if(t < tt && getStyle(backTop,"opacity")!="0"){
+        backTop.style.opacity="0";
+    }else if(t > tt && getStyle(backTop,"opacity")=="0"){
+        backTop.style.opacity="1";
     }else{
         return false;
     }
@@ -217,20 +204,33 @@ function timeChange(stop) {
 setTimeout("timeChange(" + stop + ")", 1000);
 
 
-  //地图的显示
-var map_close = document.querySelector(".close"),
-    place_position = document.querySelector(".position"),
-    place_name = document.querySelector("#old-lib"),
-    place_det = document.querySelector(".details");
+
+
+
+//地图文字的显示
+
+var map_close = document.querySelector(".close");
+	place_det = document.querySelector(".details");
+
+//地名定位图的获取
+var old_pos = document.querySelector("#old-pos");
+	taiJi_pos = document.querySelector("#taiJi-pos");
+	oldDoor_pos = document.querySelector("#oldDoor-pos");
+	newDoor_pos = document.querySelector("#newDoor-pos");
+	windRain_pos = document.querySelector("#windRain-pos");
+	newLib_pos = document.querySelector("#newLib-pos");
+
+//地名的获取
+var old_lib = document.querySelector("#old-lib");
+	tai_Ji = document.querySelector("#tai-ji");
+	old_door = document.querySelector("#old-door");
+	new_door = document.querySelector("#new-door");
+	wind_rain = document.querySelector("#wind-rain");
+	new_lib = document.querySelector("#new-lib");
+
 map_close.addEventListener("click",function(){
     place_det.style.display = 'none';
 });
-place_position.addEventListener("click",function(){
+old_pos.addEventListener("click",function(){
     place_det.style.display = "block";
-});
-place_position.addEventListener("mouseover",function(){
-    place_name.style.display = "block";
-});
-place_position.addEventListener("mouseout",function(){
-    place_name.style.display = "none";
 });
