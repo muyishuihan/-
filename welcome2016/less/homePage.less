@@ -105,10 +105,17 @@ a{
 	left: 50%;
 	margin-left: -370px;
 }
-.ani-leaf{
+.ani{
 	position: absolute;
-	top: 0;
-	z-index: 3;
+	top: 150px;
+	left: 0px;
+	animation: ani_leaf 5s infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+@keyframes ani_leaf{
+	0%{top: 150px;left: -100px;}
+	100%{}
 }
 .time{
 	position: absolute;
