@@ -538,12 +538,20 @@ a {
   top: 50%;
   margin-left: -40px;
   margin-top: -42px;
-  transition-duration: 0.7s;
 }
 .book-datails:hover .book-p,
 .house-datails:hover .house-p,
 .data-datails:hover .data-p {
-  transform: rotate(45deg);
+  animation: swing 1s infinite;
+  animation-iteration-count: 1;
+}
+@keyframes swing {
+  33% {
+    transform: rotate(20deg);
+  }
+  66% {
+    transform: rotate(-20deg);
+  }
 }
 .book-write {
   width: 250px;
@@ -646,7 +654,6 @@ a {
   top: 50%;
   margin-left: -40px;
   margin-top: -42px;
-  transition-duration: 0.7s;
 }
 .data-write {
   width: 250px;
@@ -749,7 +756,6 @@ a {
   top: 50%;
   margin-left: -40px;
   margin-top: -42px;
-  transition-duration: 0.7s;
 }
 .house-write {
   width: 250px;
