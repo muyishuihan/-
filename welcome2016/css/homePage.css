@@ -27,9 +27,6 @@ a {
   height: 3340px;
 }
 .nav-bg {
-  position: fixed;
-  top: 0;
-  z-index: 4;
   width: 100%;
   height: 60px;
   background-color: #ffffff;
@@ -78,11 +75,10 @@ a {
   color: #ffb208;
 }
 .head {
+  width: 1019px;
+  height: 789px;
   position: relative;
   margin: 0 auto;
-  margin-top: 60px;
-  width: 1019px;
-  height: 789px;   
 }
 .head-hill {
   margin-top: 46px;
@@ -113,7 +109,7 @@ a {
   position: relative;
 }
 .hour {
-  margin-left: 55px;
+  margin-left: 57px;
 }
 .min {
   margin-left: 63px;
@@ -294,17 +290,16 @@ a {
   margin-top: 5px;
 }
 .details {
+  width: 520px;
+  height: 360px;
   position: absolute;
-  margin-left: -260px;
   top: 89px;
   left: 50%;
+  margin-left: -260px;
   z-index: 2;
-  display: none; 
-  width: 520px;
-  height: 360px;   
   background-color: #fffef1;
   border-radius: 10px;
-  font-family: "Microsoft YaHei"; 
+  font-family: "Microsoft YaHei";
 }
 .close {
   width: 45px;
@@ -390,7 +385,6 @@ a {
   position: absolute;
   top: 348px;
   left: 488px;
-  cursor: pointer;
 }
 .news {
   width: 1031px;
@@ -894,19 +888,22 @@ a {
   padding-top: 50px;
   font-size: 14px;
   color: #efb352;
-  line-height: 1.714;
 }
 .aboutSch {
   width: 350px;
-  height: 23px;
-  line-height: 23px;
+  height: 20px;
+  line-height: 20px;
   margin: 0 auto;
 }
 .aboutSch li {
   float: left;
   height: 20px;
-  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
   cursor: pointer;
+}
+.border-r {
+  border-right: 1px solid #efb352;
 }
 .exp {
   text-align: center;
