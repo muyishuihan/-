@@ -118,8 +118,6 @@ var day_l = document.querySelector(".day-l");
     sec_1 = document.querySelector(".sec-l");
     sec_r = document.querySelector(".sec-r");
 
-    // dayNew = timeNew.getDay();
-
 function change(event, num){
     if (num == 0) {
         event.style.top = 0 + "px";
@@ -154,103 +152,69 @@ function change(event, num){
 }
 
 var startTime = new Date().getTime();
-var count = 0;
-function secChange() {
+	count = 0;
+	timeNew = new Date();
+    month = timeNew.getMonth() + 1;
+    year = timeNew.getFullYear()
+    day = 0;
+    stop = 0;
+
+	if (month == 8 && year == 2016){
+	    day = 31+5;
+	}else if (month == 9 && year == 2016) {
+	    day = 5;
+	}else {
+		stop = 1
+	}
+
+function timeChange(stop) {
     count++;
+
     var offset = new Date().getTime() - (startTime + count * 1000);
         nextTime = 1000 - offset;
         timeNew = new Date();
         sec = timeNew.getSeconds();
-    if (nextTime < 0) nextTime = 0;
-
-    secL = 5 - parseInt((sec%100)/10);
-    secR = 9 - sec%10;
-    change(sec_1, secL);
-    change(sec_r, secR);
-
-    setTimeout(secChange, nextTime);
-}
-setTimeout(secChange, 1000);
-
-var startTime_min = new Date().getTime();
-var count_min = 0;
-function minChange() {
-    count_min++;
-    var offset = new Date().getTime() - (startTime_min + count_min * 1000);
-        nextTime = 1000 - offset;
-        timeNew = new Date();
         min = timeNew.getMinutes();
-    if (nextTime < 0) nextTime = 0;
-
-    minL = 5 - parseInt((min%100)/10);
-    minR = 9 - min%10;
-    change(min_1, minL);
-    change(min_r, minR);
-
-    setTimeout(minChange, nextTime);
-}
-setTimeout(minChange, 1000);
-
-var startTime_hour = new Date().getTime();
-var count_hour = 0;
-function hourChange() {
-    count_hour++;
-    var offset = new Date().getTime() - (startTime_hour + count_hour * 1000);
-        nextTime = 1000 - offset;
-        timeNew = new Date();
         hour = timeNew.getHours();
+        dayNew = day - timeNew.getDay();
+
     if (nextTime < 0) nextTime = 0;
 
-    hourL = 2 - parseInt((hour%100)/10);
-    hourR = 4 - hour%10;
-    change(hour_1, hourL);
-    change(hour_r, hourR);
+    if (stop != 1) {
+	    var secL = 5 - parseInt((sec%100)/10);
+	    	secR = 9 - sec%10;
+	    	minL = 5 - parseInt((min%100)/10);
+	    	minR = 9 - min%10;
+	    	hourL = 2 - parseInt((hour%100)/10);
+	    	hourR = 4 - hour%10;
+		    dayL = parseInt((dayNew%100)/10);
+		    dayR = dayNew%10;
+		    change(day_l, dayL);
+		    change(day_r, dayR);
 
-    setTimeout(hourChange, nextTime);
+	    change(sec_1, secL);
+	    change(sec_r, secR);
+	    change(min_1, minL);
+	    change(min_r, minR);
+	    change(hour_1, hourL);
+	    change(hour_r, hourR);
+	    change(day_l, dayL);
+	    change(day_r, dayR);
+    }else{
+    	change(sec_1, 0);
+	    change(sec_r, 0);
+	    change(min_1, 0);
+	    change(min_r, 0);
+	    change(hour_1, 0);
+	    change(hour_r, 0);
+	    change(day_l, 0);
+	    change(day_r, 0);
+    }
+
+    setTimeout(timeChange, nextTime);
+
 }
-setTimeout(hourChange, 1000);
-
-
-
-
-var timeNew = new Date();
-    month = timeNew.getMonth() + 1;
-    year = timeNew.getFullYear()
-    day = 0;
-if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 ){
-    day = 31+5;
-}
-if (month == 4 || month == 6 || month == 9 || month == 11) {
-    day =5;
-}
-if (year%4 == 0 && month == 2) {
-    day == 29;
-}
-if (year%4 != 0 && month == 2) {
-    day = 28;
-}
-
-
-
-var startTime_day = new Date().getTime();
-var count_day = 0;
-function dayChange() {
-    count_day++;
-    var offset = new Date().getTime() - (startTime_day + count_day * 1000);
-        nextTime = 1000 - offset;
-        timeNew = new Date();
-        dayNew = timeNew.getDay();
-    if (nextTime < 0) nextTime = 0;
-
-    dayNew = day - dayNew;
-    dayL = parseInt((dayNew%100)/10);
-    dayR = dayNew%10;
-    change(day_l, dayL);
-    change(day_r, dayR);
-
-    setTimeout(dayChange, nextTime);
-}
-setTimeout(dayChange, 1000);
+setTimeout("timeChange(" + stop + ")", 1000);
 
 
   //地图的显示
