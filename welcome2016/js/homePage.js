@@ -45,6 +45,11 @@ var getStyle = function(dom,attr){
     return dom.currentStyle ? dom.currentStyle[attr] : getComputedStyle(dom, false)[attr];
 }
 
+
+
+
+
+
 //回到顶部
 var backTop = document.querySelector(".back"); //回顶按钮
     backTop.addEventListener("click", function(){
@@ -56,6 +61,9 @@ var tt = 500;
     back = document.querySelector(".back");
     fix_l = document.querySelector(".fix-l")
     fix_r = document.querySelector(".fix-r");
+
+
+
 
 
 //飞机和回顶的隐藏
@@ -98,6 +106,9 @@ window.onscroll = function(){
     }
 }
 
+
+
+//计时器
 var day_l = document.querySelector(".day-l");
     day_r = document.querySelector(".day-r");
     hour_1 = document.querySelector(".hour-l");
@@ -241,13 +252,21 @@ function dayChange() {
 }
 setTimeout(dayChange, 1000);
 
-//详细资料的开与关
-var open = document.querySelector("#old-lib"),
-  close = document.querySelector(".close"),
-  details = document.querySelector(".details");
-  open.addEventListener("click",function () {
-    details.style.display = "block";
-  })
-  close.addEventListener("click",function () {
-    details.style.display = "none";
-  })
+
+  //地图的显示
+var map_close = document.querySelector(".close"),
+    place_position = document.querySelector(".position"),
+    place_name = document.querySelector("#old-lib"),
+    place_det = document.querySelector(".details");
+map_close.addEventListener("click",function(){
+    place_det.style.display = 'none';
+});
+place_position.addEventListener("click",function(){
+    place_det.style.display = "block";
+});
+place_position.addEventListener("mouseover",function(){
+    place_name.style.display = "block";
+});
+place_position.addEventListener("mouseout",function(){
+    place_name.style.display = "none";
+});
