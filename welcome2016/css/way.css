@@ -77,6 +77,9 @@
 
 
 
+
+
+
 /*三级导航 5块*/
 #third_nav_five {
     height: 120px;
@@ -118,6 +121,10 @@
 
 
 
+
+
+
+
 /*三级导航（3块）*/
 #third_nav_three {
     height: 120px;
@@ -156,6 +163,10 @@
     font-size: 20px;
     text-align: center;
 }
+
+
+
+
 
 
 
@@ -286,6 +297,11 @@ p {
 }
 
 
+
+
+
+
+
 /*qq群*/
 #qq_group_d {
     width: 963px;
@@ -356,6 +372,10 @@ p {
 
 
 
+
+
+
+
 /*到校路线*/
 #traffic_d {
     width: 963px;
@@ -412,6 +432,11 @@ p {
 }
 
 
+
+
+
+
+
 /*必备清单*/
  #necessary_d {
     width: 963px;
@@ -452,6 +477,11 @@ p {
     top: 533px;
     left:38px;
  }
+
+
+
+
+
 
 
 
@@ -557,6 +587,9 @@ p {
     color: #ffface;
     float: left;
 }
+
+
+
 
 
 
