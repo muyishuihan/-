@@ -1,72 +1,29 @@
 //封装
-function addClass(element, classname) {  //添加class  （元素， class的字符串）
-
-    element.className += " " + classname;
-
-}
-function removeClass(element, classname) { //删除class    （元素， class的字符串）
-
-    var regular       = new RegExp(' ' + '(' + classname +'' + ')*')
-
-    element.className = element.className.replace(regular, "");
-	element.className += " " + classname;
-
-}
-function removeClass(element, classname) { //删除class	（元素， class的字符串）
-
-	var regular       = new RegExp(' ' + '(' + classname +'' + ')*')
-
-	element.className = element.className.replace(regular, "");
-
-}
-function hasClass(element, index) {  //检测class中是否有要检测的class （元素， 要检测class的字符串）
-
-    if (element.className.indexOf(index) != -1) {  //没有函数就返回true
-
-        return true;
-
-    }else{      //有就返回false
-
-        return false;
-
-    }
-	if (element.className.indexOf(index) != -1) {  //没有函数就返回true
-
-		return true;
-
-	}else{		//有就返回false
-
-		return false;
-
-	}
-
-}
 var getStyle = function(dom,attr){
     return dom.currentStyle ? dom.currentStyle[attr] : getComputedStyle(dom, false)[attr];
 }
 
-
-
-
-
-
-//回到顶部
-var backTop = document.querySelector(".back"); //回顶按钮
-    backTop.addEventListener("click", function(){
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-    })
-
-
+var $ = function (event) {
+	return document.querySelector(event);
+}
 
 
 //飞机和回顶的隐藏
 var tt = 500;
-    fix_l = document.querySelector(".fix-l")
-    fix_r = document.querySelector(".fix-r");
+    fix_l = $(".fix-l")
+    fix_r = $(".fix-r");
 
-window.onscroll = function(){
+window.onscroll = function(){  //兼容ie8
     var t = document.documentElement.scrollTop || document.body.scrollTop;
+    	bottom_t = document.documentElement.offsetHeight || document.body.offsetHeight;
+    	bottom_b = document.documentElement.clientHeight || document.body.clientHeight;
+    	bottom = bottom_t - bottom_b - t;
+
+	if (bottom <= 10) {
+		backTop.style.bottom = (-bottom) + 30 + "px";
+	}else {
+		backTop.style.bottom = 30 + "px";
+	}
 
     if(t < tt && getStyle(backTop,"opacity")!="0"){
         backTop.style.opacity="0";
@@ -94,16 +51,22 @@ window.onscroll = function(){
 }
 
 
+//回到顶部
+var backTop = $(".back"); //回顶按钮
+    backTop.addEventListener("click", function(){
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    })
 
 //计时器
-var day_l = document.querySelector(".day-l");
-    day_r = document.querySelector(".day-r");
-    hour_1 = document.querySelector(".hour-l");
-    hour_r = document.querySelector(".hour-r");
-    min_1 = document.querySelector(".min-l");
-    min_r = document.querySelector(".min-r");
-    sec_1 = document.querySelector(".sec-l");
-    sec_r = document.querySelector(".sec-r");
+var day_l = $(".day-l");
+    day_r = $(".day-r");
+    hour_1 = $(".hour-l");
+    hour_r = $(".hour-r");
+    min_1 = $(".min-l");
+    min_r = $(".min-r");
+    sec_1 = $(".sec-l");
+    sec_r = $(".sec-r");
 
 function change(event, num){
     if (num == 0) {
@@ -204,33 +167,84 @@ function timeChange(stop) {
 setTimeout("timeChange(" + stop + ")", 1000);
 
 
+//地名的获取和移动  点击地图名字显示详细信息
+var place_name = $(".place-name");
+	place_position = $(".place-position");
+
+place_position.addEventListener("mouseover", function(e){
+
+	switch (e.target.id) {
+		case "old-pos":
+				place_name.innerHTML = "老图书馆"
+			break;
+		case "taiJi-pos":
+				place_name.innerHTML = "太极操场"
+			break;
+		case "oldDoor-pos":
+				place_name.innerHTML = "老校门"
+			break;
+		case "newDoor-pos":
+				place_name.innerHTML = "新校门"
+			break;
+		case "windRain-pos":
+				place_name.innerHTML = "风雨操场"
+			break;
+		case "newLib-pos":
+				place_name.innerHTML = "数字图书馆"
+			break;
+	}
+
+	place_name.style.left = parseFloat(e.target.offsetLeft) + 40 + "px";
+	place_name.style.top = parseFloat(e.target.offsetTop) + 20 + "px";
+
+})
 
 
+//建筑物的详细情况切换
+var details = $(".details");
+	close = $(".close");
+	datails_p = $(".datails-p");
+	datails_name = $(".datails-name");
+	datails_write = $(".datails-write")
 
-//地图文字的显示
+close.addEventListener("click", function(){
+	details.style.display = "none";
+})
 
-var map_close = document.querySelector(".close");
-	place_det = document.querySelector(".details");
-
-//地名定位图的获取
-var old_pos = document.querySelector("#old-pos");
-	taiJi_pos = document.querySelector("#taiJi-pos");
-	oldDoor_pos = document.querySelector("#oldDoor-pos");
-	newDoor_pos = document.querySelector("#newDoor-pos");
-	windRain_pos = document.querySelector("#windRain-pos");
-	newLib_pos = document.querySelector("#newLib-pos");
-
-//地名的获取
-var old_lib = document.querySelector("#old-lib");
-	tai_Ji = document.querySelector("#tai-ji");
-	old_door = document.querySelector("#old-door");
-	new_door = document.querySelector("#new-door");
-	wind_rain = document.querySelector("#wind-rain");
-	new_lib = document.querySelector("#new-lib");
-
-map_close.addEventListener("click",function(){
-    place_det.style.display = 'none';
+place_position.addEventListener("click", function(e){
+	details.style.display = "block";
+	switch (e.target.id) {
+		case "old-pos":
+				datails_p.src = "../datails/oldLib.png";
+				datails_name.innerHTML = "老图书馆";
+				datails_write.innerHTML = "重庆邮电大学图书馆始建于1950年。现有馆舍20873平方米（含新建的数字图书馆12219平方米）。2002年重庆邮电大学图书馆自动化建设工作被重庆市教委评为优秀馆。"
+			break;
+		case "taiJi-pos":
+				datails_p.src = "../datails/1.jpg"
+				datails_name.innerHTML = "太极操场";
+				datails_write.innerHTML = "操场是供体育锻炼用的场地，多用指学校进行体育活动和教学活动的专置场地。（学习专用）"
+			break;
+		case "oldDoor-pos":
+				datails_p.src = "../datails/2.jpg"
+				datails_name.innerHTML = "老校门";
+				datails_write.innerHTML = "1921年，立飞檐翘角牌坊式校门。五十年代初拆除。2004年年末，为纪念建校一百周年，在原址重建，供观瞻和纪念。"
+			break;
+		case "newDoor-pos":
+				datails_p.src = "../datails/3.jpg"
+				datails_name.innerHTML = "新校门";
+				datails_write.innerHTML = "我们学校的新校门愉快的暑假结束了,我们回到了久违的学校,我惊喜地发现,我们的校门 发生了巨大的变化"
+			break;
+		case "windRain-pos":
+				datails_p.src = "../datails/4.jpg"
+				datails_name.innerHTML = "风雨操场";
+				datails_write.innerHTML = "《风雨》，《诗经·郑风》篇名。为先秦时代郑地汉族民歌。全诗三章，每章十二字。"
+			break;
+		case "newLib-pos":
+				datails_p.src = "../datails/5.jpg"
+				datails_name.innerHTML = "数字图书馆";
+				datails_write.innerHTML = "图书馆分类教育教学图书为主，主要包括教育教学，教育研究，教育管理，课外博览，信息技术，社会科学与哲学，文学，科普，政法，经济，历史，生活，体育，艺术，军事等类图书。"
+			break;
+	}
 });
-old_pos.addEventListener("click",function(){
-    place_det.style.display = "block";
-});
+
+
