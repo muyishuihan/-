@@ -64,10 +64,10 @@ a {
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  transition-duration: 1s;
+  transition-duration: 0.7s;
 }
 .nav-bar li:hover {
-  transform: rotate(15deg);
+  transform: rotate(10deg);
 }
 .hp {
   height: 50px;
@@ -117,7 +117,7 @@ a {
   position: absolute;
   top: 431px;
   left: 50%;
-  margin-left: -85px;
+  margin-left: -84px;
 }
 .time li {
   float: left;
@@ -133,7 +133,7 @@ a {
   margin-left: 62px;
 }
 .sec {
-  margin-left: 55px;
+  margin-left: 57px;
 }
 .time li img {
   width: 22px;
@@ -276,10 +276,35 @@ a {
   float: right;
 }
 .map-con {
-  width: 1031px;
-  height: 550px;
+  width: 1027px;
+  height: 547px;
+  position: relative;
+  margin: 0 auto;
+}
+.map-border {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
+}
+.map-box-big {
+  width: 980px;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  margin-top: -251px;
+  left: 50%;
+  margin-left: -490px;
+  z-index: -1;
+}
+.map-box-small {
+  width: 1037px;
+  height: 693px;
+  position: absolute;
+}
+.map-cqupt {
+  position: absolute;
+  top: -65px;
+  left: -15px;
 }
 .big-small {
   width: 40px;
@@ -287,6 +312,7 @@ a {
   position: absolute;
   right: 42px;
   bottom: 56px;
+  z-index: 2;
 }
 .big-c {
   width: 40px;
@@ -314,7 +340,7 @@ a {
   top: 89px;
   left: 50%;
   margin-left: -260px;
-  z-index: 2;
+  z-index: 10;
   background-color: #fffef1;
   border-radius: 10px;
   font-family: "Microsoft YaHei";
@@ -395,17 +421,21 @@ a {
   text-align: center;
   font-size: 18px;
   font-family: "Microsoft YaHei";
-}
-#old-pos {
-  position: absolute;
-  top: 280px;
-  left: 520px;
-  cursor: pointer;
-}
-#old-lib {
   position: absolute;
   top: 280px;
   left: 560px;
+  cursor: default;
+  z-index: 2;
+  transition: top 1s, left 1s;
+}
+.place-position img {
+  z-index: 2;
+}
+#old-pos {
+  position: absolute;
+  top: 260px;
+  left: 520px;
+  cursor: pointer;
 }
 #taiJi-pos {
   position: absolute;
@@ -413,21 +443,11 @@ a {
   left: 396px;
   cursor: pointer;
 }
-#tai-ji {
-  position: absolute;
-  top: 100px;
-  left: 430px;
-}
 #oldDoor-pos {
   position: absolute;
   top: 410px;
   left: 370px;
   cursor: pointer;
-}
-#old-door {
-  position: absolute;
-  top: 450px;
-  left: 280px;
 }
 #newDoor-pos {
   position: absolute;
@@ -435,32 +455,17 @@ a {
   left: 220px;
   cursor: pointer;
 }
-#new-door {
-  position: absolute;
-  top: 420px;
-  left: 140px;
-}
 #windRain-pos {
   position: absolute;
   top: 180px;
   left: 290px;
   cursor: pointer;
 }
-#wind-rain {
-  position: absolute;
-  top: 240px;
-  left: 240px;
-}
 #newLib-pos {
   position: absolute;
   top: 310px;
   left: 270px;
   cursor: pointer;
-}
-#new-lib {
-  position: absolute;
-  top: 310px;
-  left: 310px;
 }
 .news {
   width: 1031px;
@@ -542,15 +547,18 @@ a {
 .book-datails:hover .book-p,
 .house-datails:hover .house-p,
 .data-datails:hover .data-p {
-  animation: swing 1s infinite;
+  animation: swing 0.5s infinite;
   animation-iteration-count: 1;
 }
 @keyframes swing {
-  33% {
-    transform: rotate(20deg);
+  25% {
+    transform: rotate(10deg);
   }
-  66% {
-    transform: rotate(-20deg);
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
   }
 }
 .book-write {
@@ -950,22 +958,23 @@ a {
   position: fixed;
   right: 10px;
   bottom: 30px;
+<<<<<<< HEAD
   cursor: pointer;
   z-index: 100;
+=======
+  z-index: 10;
+>>>>>>> 659d995c297b92f40476a8649d70002cecd2c944
   opacity: 0;
   transition: opacity 1s;
+  cursor: pointer;
 }
 .backTop {
   position: absolute;
   z-index: -1;
 }
 .back-write {
-  font-size: 26px;
-  color: #fff;
-  width: 55px;
-  height: 55px;
-  margin-top: 16px;
-  margin-left: 32px;
+  width: 114px;
+  height: 112px;
 }
 .end {
   clear: both;
