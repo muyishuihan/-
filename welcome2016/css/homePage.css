@@ -951,7 +951,7 @@ a {
   right: 10px;
   bottom: 30px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 100;
   opacity: 0;
   transition: opacity 1s;
 }
