@@ -1,0 +1,912 @@
+body{
+	margin: 0;
+	padding: 0;
+	min-width: 1230px;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+//大背景部分
+.background{
+	width: 100%;
+	height: 3340px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	min-width: 1230px; //待定？？？？？
+}
+.bg{
+	width: 100%;
+	height: 3340px;
+}
+
+//导航栏部分
+.nav-bg{
+	width: 100%;
+	height: 60px;
+	background-color: #ffffff;
+	min-width: 1230px; //待定？？？？？
+	position: fixed;
+	top: 0px;
+	z-index: 30;
+}
+.nav{
+	width: 985px;
+	height: 60px;
+	margin: 0 auto;
+}
+.cqupt-img{
+	float: left;
+	width: 46px;
+	height: 46px;
+	margin-top: 7px;
+}
+.cqupt-write{
+	float: left;
+	width: 147px;
+	height: 40px;
+	margin-top: 10px;
+}
+.nav-bar{
+	float: right;
+	height: 60px;
+	line-height: 60px;
+}
+.nav-bar li{
+	float: left;
+	margin-left: 33px;
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+	font-weight: 500;  //待定？？？？？
+	cursor: pointer;
+	transition-duration: 0.7s;
+}
+.nav-bar li:hover{
+	transform: rotate(10deg);
+}
+.hp{
+	height: 50px;
+	color: #82cb83;
+	border-bottom: solid 3px #82cb83;
+}
+.new-s{
+	color: #ffb208;
+}
+
+//头版部分
+.head{
+	width: 1019px;
+	height: 789px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+.head-hill{
+	margin-top: 46px;
+}
+.head-write{
+	position: absolute;
+	top: 37px;
+	left: 50%;
+	margin-left: -266px;
+}
+.head-leaf{
+	position: absolute;
+	top: 94px;
+	left: 50%;
+	margin-left: -370px;
+}
+.ani{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	animation: ani_leaf 5s infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+@keyframes ani_leaf{
+	0%{
+		top: 150px;
+		left: -100px;
+	}
+	100%{}
+}
+.time{
+	position: absolute;
+	top: 431px;
+	left: 50%;
+	margin-left: -84px;
+}
+.time li{
+	float: left;
+	width: 22px;
+	height: 36px;
+	overflow: hidden;
+	position: relative;
+}
+.time li img{
+	width: 22px;
+	height: 360px;
+	position: absolute;
+	top: 0;
+	transition: top 0.5s;
+	transition-timing-function: linear;
+}
+.hour{
+	margin-left: 55px;
+}
+.min{
+	margin-left: 63px;
+}
+.sec{
+	margin-left: 57px;
+}
+.leaf{
+	width: 1230px;
+	position: absolute;
+	top: 341px;
+	left: 50%;
+	margin-left: -615px;
+	z-index: 1;
+}
+
+//左边扫二维码部分
+.fix-l{
+	width: 162px;
+	height: 332px;
+	position: fixed;
+	top: 50%;
+	left: 15px;
+	margin-top: -166px;
+	z-index: 4;
+	animation: airL 2s infinite;
+	animation-iteration-count: 1;
+	opacity: 1;
+	transition: opacity 1s;
+}
+@keyframes airL{
+	from{left: -200px}
+	to{}
+}
+.airL-dis{
+	animation: air_d 2s infinite;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+@keyframes air_d{
+	from{opacity: 1}
+	to{}
+}
+.air-l{
+	position: relative;
+	left: -15px;
+	top: 10px;
+}
+.air-l-write{
+	width: 143px;
+	height: 171px;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	color: #ffb464;
+	font-family: "Microsoft YaHei";
+}
+.phone-write{
+	font-size: 24px;
+	text-align: center;
+}
+.download{
+	position: absolute;
+	bottom: 10px;
+	font-size: 18px;
+}
+
+//右边扫二维码部分
+.fix-r{
+	width: 162px;
+	height: 332px;
+	position: fixed;
+	top: 50%;
+	right: 5px;
+	margin-top: -166px;
+	z-index: 4;
+	animation: airR 2s infinite;
+	animation-iteration-count: 1;
+	opacity: 1;
+	transition: opacity 1s;
+}
+@keyframes airR{
+	from{right: -200px}
+	to{}
+}
+.airR-dis{
+	.airL-dis;
+}
+.air-r{
+	position: relative;
+	right: -30px;
+	top: 10px;
+}
+.air-r-write{
+	width: 143px;
+	height: 171px;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	font-family: "Microsoft YaHei";
+	color: #66c5d3;
+}
+.wx-write{
+	.phone-write;
+}
+.see{
+	.download;
+	left: 5px;
+}
+
+// 地图部分
+.map{
+	width: 1031px;
+	height: 631px;
+	margin: 0 auto;
+	position: relative;
+	top: -138px;
+}
+.title-map{
+	width: 219px;
+	height: 110px;
+	position: relative;
+	margin: 0 auto;
+	top: 20px;
+}
+.iconfont-write{
+	width: 160px;
+	height: 52px;
+	line-height: 52px;
+	position: absolute;
+	top: 7px;
+	left: 22px;
+}
+.map-write{
+	font-size: 30px;
+	color: #f78b08;
+	font-family: "Microsoft YaHei";
+	float: right;
+}
+//地图图片部分
+.map-con{
+	width: 1027px;
+	height: 547px;
+	position: relative;
+	margin:  0 auto;
+}
+.masking{
+	width: 980px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	margin-top: -251px;
+	left: 50%;
+	margin-left: -490px;
+	z-index: 3;
+	cursor: default;
+
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+}
+.masking:active{
+	cursor: default;
+
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+}
+.map-border{  //地图边框
+	position: absolute;
+	z-index: 1;
+}
+.map-box-big{
+	width: 980px;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	margin-top: -251px;
+	left: 50%;
+	margin-left: -490px;
+	z-index: -1;
+}
+.map-cqupt{
+	position: absolute;
+	top: -65px;
+	left: -15px;
+	opacity: 1;
+	transition: opacity 2s;
+}
+.big-map-cqupt{
+	position: absolute;
+	top: 0px;
+	opacity: 0;
+	transition: opacity 2s;
+	max-width: 3518px;
+	max-height: 2351px;
+}
+//加减号部分
+.big-small{
+	width: 40px;
+	height: 85px;
+	position: absolute;
+	right: 42px;
+	bottom: 56px;
+	z-index: 4;
+}
+.big-c{
+	width: 40px;
+	height: 40px;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 20px;
+	background-color:rgba(255,255,255,0.7);
+	cursor: pointer;
+}
+.small-c{
+	.big-c;
+	margin-top: 5px;
+}
+//详细介绍部分
+.details{
+	width: 520px;
+	height: 360px;
+	position: absolute;
+	top: 89px;
+	left: 50%;
+	margin-left: -260px;
+	z-index: 5;
+	background-color: #fffef1;
+	border-radius: 10px;
+	font-family: "Microsoft YaHei";
+	display: none;
+}
+.close{
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 22px;
+	background-color:#ffec96;
+	cursor: pointer;
+
+	position: absolute;
+	right: -20px;
+	top: -20px;
+	z-index: 5;
+}
+.datail-c{
+	width: 465px;
+	height: 190px;
+	margin: 0 auto;
+	margin-top: 26px;
+	position: relative;
+	overflow: hidden;
+}
+.list{
+	width: 3720px;
+	height: 190px;
+	position: absolute;
+}
+.datails-p{
+	float: left;
+	width: 465px;
+	height: 190px;
+}
+.arrow-l{
+	width: 50px;
+	height: 60px;
+	background-color:rgba(0,0,0,0.5);
+	line-height: 60px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	left: 0;
+	cursor: pointer;
+}
+.arrow-r{
+	width: 50px;
+	height: 60px;
+	background-color:rgba(0,0,0,0.5);
+	line-height: 60px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	right: 0;
+	cursor: pointer;
+}
+.datails-name{
+	font-size: 18px;
+	height: 45px;
+	line-height: 45px;
+	width: 465px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 6px;
+	cursor: pointer;
+}
+.datails-write{
+	font-size: 12px;
+	height: 71px;
+	line-height: 20px;
+	width: 465px;
+	margin: 0 auto;
+	color: #666666;
+
+}
+//地名部分
+.place-name{
+	width: 97px;
+	height: 40px;
+	border-radius: 15px;
+	background-color:rgba(255,255,255,0.5);
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+	position: absolute;
+	top: 280px;
+	left: 560px;
+	cursor: default;
+	z-index: 4;
+	transition: top 1s, left 1s;
+
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+}
+.place-position img{
+	z-index: 4;
+}
+//老图书馆
+#old-pos{
+	position: absolute;
+	top: 260px;
+	left: 520px;
+	cursor: pointer;
+}
+//太极操场
+#taiJi-pos{
+	position: absolute;
+	top: 120px;
+	left: 396px;
+	cursor: pointer;
+}
+//老校门
+#oldDoor-pos{
+	position: absolute;
+	top: 410px;
+	left: 370px;
+	cursor: pointer;
+}
+//新校门
+#newDoor-pos{
+	position: absolute;
+	top: 370px;
+	left: 220px;
+	cursor: pointer;
+}
+//风雨操场
+#windRain-pos{
+	position: absolute;
+	top: 180px;
+	left: 290px;
+	cursor: pointer;
+}
+//数字图书馆
+#newLib-pos{
+	position: absolute;
+	top: 310px;
+	left: 270px;
+	cursor: pointer;
+}
+
+//文案部分
+.news{
+	width: 1031px;
+	height: 627px;
+	margin: 0 auto;
+	position: relative;
+}
+.news-p{
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+}
+//书的部分
+.news-l{
+	width: 335px;
+	height: 627px;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+}
+.book-title{
+	width: 219px;
+	height: 110px;
+	position: relative;
+	margin: 0 auto;
+}
+.b-content{
+	width: 160px;
+	height: 52px;
+	line-height: 52px;
+	position: absolute;
+	top: 7px;
+	left: 22px;
+}
+.book-t-write{
+	font-size: 30px;
+	color: #f78b08;
+	font-family: "Microsoft YaHei";
+	float: right;
+}
+.book-datails{
+	width: 250px;
+	height: 435px;
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	margin-left: -120px;
+}
+.bb-circle{
+	width: 162px;
+	height: 162px;
+	margin: 0 auto;
+	border-radius: 81px;
+	background-color: #fff6dd;
+	position: relative;
+	top: 33px;
+}
+.bs-circle{
+	width: 142px;
+	height: 142px;
+	border-radius: 71px;
+	background-color: #fdd873;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -71px;
+	margin-top: -71px;
+}
+.book-p{
+	width: 80px;
+	height: 85px;
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+	margin-top: -42px;
+}
+.book-datails:hover .book-p,
+.house-datails:hover .house-p,
+.data-datails:hover .data-p {
+	animation: swing 0.5s infinite;
+	animation-iteration-count: 1;
+}
+@keyframes swing{
+	0%{};
+	25%{transform: rotate(10deg);};
+	50%{transform: rotate(-10deg);}
+	70%{transform: rotate(10deg);};
+	100%{}
+}
+.book-write{
+	width: 250px;
+	height: 126px;
+	margin: 0 auto;
+	margin-top: 60px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	line-height: 25px;
+	color: #666666;
+}
+.know-b{
+	width: 185px;
+	height: 62px;
+	margin: 0 auto;
+	margin-top: 35px;
+	color: #fff;
+	line-height: 62px;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+	border-radius: 25px;
+	cursor: pointer;
+	background: linear-gradient(#1ddbda, #13c3bb);
+	box-shadow: -7px -7px #13c3bb inset;
+
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+}
+.know-b:hover,
+.know-d:hover,
+.know-h:hover{
+	background: linear-gradient(#13c3bb, #1ddbda);
+	animation: updown 0.4s ;
+  	animation-count: 1;  
+}
+@keyframes updown{
+  0%  {}
+  33%{margin-top: 30px;}
+  66%{margin-top: 40px;}
+  100%{}
+}
+.know-b:active,
+.know-d:active,
+.know-h:active{
+	background: linear-gradient(#1ddbda, #13c3bb);
+}
+//数据的部分
+.news-c{
+	.news-l;
+	margin-left: 0;
+}
+.data-title{
+	.book-title;
+}
+.d-content{
+	.b-content;
+}
+.data-t{
+  float: left;
+  margin-top: 13px;
+}
+.data-t-write{
+	.book-t-write;
+}
+.data-datails{
+	.book-datails;
+}
+.db-circle{
+	.bb-circle
+}
+.ds-circle{
+	.bs-circle
+}
+.data-p{
+	.book-p
+}
+.data-write{
+	.book-write
+}
+.know-d{
+	.know-b
+}
+//风采的部分
+.news-r{
+	.news-c;
+}
+.house-title{
+	.book-title;
+}
+.h-content{
+	.b-content;
+}
+.house-t{
+	.data-t
+}
+.house-t-write{
+	.book-t-write;
+}
+.house-datails{
+	.book-datails;
+}
+.hb-circle{
+	.bb-circle
+}
+.hs-circle{
+	.bs-circle
+}
+.house-p{
+	.book-p
+}
+.house-write{
+	.book-write
+}
+.know-h{
+	.know-b;
+}
+//学姐知道
+.student-k{
+	width: 1024px;
+	height: 365px;
+	margin: 0 auto;
+	margin-top: 135px;
+}
+.stu-t{
+	.book-title;
+	top: 10px;
+}
+.title-p{
+	position: absolute;
+	z-index: -2;
+}
+.s-content{
+	.b-content;
+}
+.stu-write{
+	.book-t-write;
+}
+.stu-con{
+	width: 1024px;
+	height: 260px;
+	position: relative;
+}
+.weKnow{
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+.stuKnow-p{
+	float: left;
+	margin-top: 16px;
+	margin-left: 21px;
+}
+.stu-r{
+	float: right;
+	width: 510px;
+	height: 137px;
+	margin-right: 55px;
+	margin-top: 63px;
+}
+.stu-c{
+	width: 510px;
+	height: 58px;
+	line-height: 25px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+	color: #666666;
+}
+.stu-know{
+	width: 185px;
+	height: 62px;
+	color: #fff;
+	line-height: 62px;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Microsoft YaHei";
+	border-radius: 25px;
+	float: right;
+	margin-top: 17px;
+	cursor: pointer;
+	background: linear-gradient(#1ddbda, #13c3bb);
+	box-shadow: -7px -7px #13c3bb inset;
+
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+	-khtml-user-select:none;
+	user-select:none;
+}
+.stu-know:hover,
+.we-know:hover{
+	background: linear-gradient(#13c3bb, #1ddbda);
+	animation: topbottom 0.4s;
+}
+@keyframes topbottom {
+	0%  {}
+	33% {margin-top: 12px;}
+	66% {margin-top: 23px;}
+	100%{}
+}
+.stu-know:active,
+.we-know:active{
+	background: linear-gradient(#1ddbda, #13c3bb);
+}
+
+//关于我们
+.we-k{
+	.student-k;
+	margin-top: 31px;
+}
+.we-t{
+	.stu-t;
+}
+.w-content{
+	.s-content;
+}
+.we-write{
+	.stu-write;
+}
+.we-con{
+	.stu-con;
+}
+.aboutWe-p{
+	.stuKnow-p;
+}
+.we-r{
+	.stu-r;
+}
+.we-c{
+	.stu-c;
+}
+.we-know{
+	.stu-know
+}
+
+.back{
+	width: 114px;
+	height: 112px;
+	position: fixed;
+	right: 10px;
+	bottom: 30px;
+	z-index: 10;
+	opacity: 0;
+	transition: opacity 1s;
+	cursor: pointer;
+}
+.backTop{
+	position: absolute;
+	z-index: -1;
+}
+.back-write{
+	width: 114px;
+	height: 112px;
+}
+
+.end{
+	clear: both;
+	width: 100%;
+	height: 177px;
+	background-color: #fffde7;
+	font-family: "Microsoft YaHei";
+	position: relative;
+	top: 172px;
+}
+.end-con {
+  width: 730px;
+  height: 79px;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-size: 14px;
+  color: #efb352;
+  line-height: 1.714;
+}
+.aboutSch {
+  width: 330px;
+  height: 23px;
+  line-height: 23px;
+  margin: 0 auto;
+}
+.aboutSch li {
+  float: left;
+  height: 20px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.exp {
+  text-align: center;
+}
+.address{
+	text-align: center;
+}
