@@ -33,7 +33,7 @@ a {
   min-width: 1230px;
   position: fixed;
   top: 0px;
-  z-index: 4;
+  z-index: 30;
 }
 .nav {
   width: 985px;
@@ -156,7 +156,7 @@ a {
   top: 50%;
   left: 15px;
   margin-top: -166px;
-  z-index: 4;
+  z-index: 100;
   animation: airL 2s infinite;
   animation-iteration-count: 1;
   opacity: 1;
@@ -207,7 +207,7 @@ a {
   top: 50%;
   right: 5px;
   margin-top: -166px;
-  z-index: 4;
+  z-index: 100;
   animation: airR 2s infinite;
   animation-iteration-count: 1;
   opacity: 1;
