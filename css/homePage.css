@@ -126,20 +126,22 @@ a {
   overflow: hidden;
   position: relative;
 }
-.hour {
-  margin-left: 56px;
-}
-.min {
-  margin-left: 62px;
-}
-.sec {
-  margin-left: 57px;
-}
 .time li img {
   width: 22px;
   height: 360px;
   position: absolute;
   top: 0;
+  transition: top 0.5s;
+  transition-timing-function: linear;
+}
+.hour {
+  margin-left: 55px;
+}
+.min {
+  margin-left: 63px;
+}
+.sec {
+  margin-left: 57px;
 }
 .leaf {
   width: 1230px;
@@ -156,7 +158,7 @@ a {
   top: 50%;
   left: 15px;
   margin-top: -166px;
-  z-index: 100;
+  z-index: 4;
   animation: airL 2s infinite;
   animation-iteration-count: 1;
   opacity: 1;
@@ -207,7 +209,7 @@ a {
   top: 50%;
   right: 5px;
   margin-top: -166px;
-  z-index: 100;
+  z-index: 4;
   animation: airR 2s infinite;
   animation-iteration-count: 1;
   opacity: 1;
@@ -281,6 +283,30 @@ a {
   position: relative;
   margin: 0 auto;
 }
+.masking {
+  width: 980px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  margin-top: -251px;
+  left: 50%;
+  margin-left: -490px;
+  z-index: 3;
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.masking:active {
+  cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
 .map-border {
   position: absolute;
   z-index: 1;
@@ -296,15 +322,20 @@ a {
   margin-left: -490px;
   z-index: -1;
 }
-.map-box-small {
-  width: 1037px;
-  height: 693px;
-  position: absolute;
-}
 .map-cqupt {
   position: absolute;
   top: -65px;
   left: -15px;
+  opacity: 1;
+  transition: opacity 2s;
+}
+.big-map-cqupt {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  transition: opacity 2s;
+  max-width: 3518px;
+  max-height: 2351px;
 }
 .big-small {
   width: 40px;
@@ -312,7 +343,7 @@ a {
   position: absolute;
   right: 42px;
   bottom: 56px;
-  z-index: 2;
+  z-index: 4;
 }
 .big-c {
   width: 40px;
@@ -340,7 +371,7 @@ a {
   top: 89px;
   left: 50%;
   margin-left: -260px;
-  z-index: 10;
+  z-index: 5;
   background-color: #fffef1;
   border-radius: 10px;
   font-family: "Microsoft YaHei";
@@ -357,7 +388,7 @@ a {
   position: absolute;
   right: -20px;
   top: -20px;
-  z-index: 3;
+  z-index: 5;
 }
 .datail-c {
   width: 465px;
@@ -365,10 +396,17 @@ a {
   margin: 0 auto;
   margin-top: 26px;
   position: relative;
+  overflow: hidden;
+}
+.list {
+  width: 3720px;
+  height: 190px;
+  position: absolute;
 }
 .datails-p {
-  width: 100%;
-  height: 100%;
+  float: left;
+  width: 465px;
+  height: 190px;
 }
 .arrow-l {
   width: 50px;
@@ -425,11 +463,16 @@ a {
   top: 280px;
   left: 560px;
   cursor: default;
-  z-index: 2;
+  z-index: 4;
   transition: top 1s, left 1s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 .place-position img {
-  z-index: 2;
+  z-index: 4;
 }
 #old-pos {
   position: absolute;
@@ -585,11 +628,30 @@ a {
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
   box-shadow: -7px -7px #13c3bb inset;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
-.know-b:hover {
+.know-b:hover,
+.know-d:hover,
+.know-h:hover {
   background: linear-gradient(#13c3bb, #1ddbda);
+  animation: updown 0.4s ;
+  animation-count: 1;
 }
-.know-b:active {
+@keyframes updown {
+  33% {
+    margin-top: 30px;
+  }
+  66% {
+    margin-top: 40px;
+  }
+}
+.know-b:active,
+.know-d:active,
+.know-h:active {
   background: linear-gradient(#1ddbda, #13c3bb);
 }
 .news-c {
@@ -687,12 +749,11 @@ a {
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
   box-shadow: -7px -7px #13c3bb inset;
-}
-.know-d:hover {
-  background: linear-gradient(#13c3bb, #1ddbda);
-}
-.know-d:active {
-  background: linear-gradient(#1ddbda, #13c3bb);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 .news-r {
   width: 335px;
@@ -789,12 +850,11 @@ a {
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
   box-shadow: -7px -7px #13c3bb inset;
-}
-.know-h:hover {
-  background: linear-gradient(#13c3bb, #1ddbda);
-}
-.know-h:active {
-  background: linear-gradient(#1ddbda, #13c3bb);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 .student-k {
   width: 1024px;
@@ -871,11 +931,27 @@ a {
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
   box-shadow: -7px -7px #13c3bb inset;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
-.stu-know:hover {
+.stu-know:hover,
+.we-know:hover {
   background: linear-gradient(#13c3bb, #1ddbda);
+  animation: topbottom 0.4s;
 }
-.stu-know:active {
+@keyframes topbottom {
+  33% {
+    margin-top: 12px;
+  }
+  66% {
+    margin-top: 23px;
+  }
+}
+.stu-know:active,
+.we-know:active {
   background: linear-gradient(#1ddbda, #13c3bb);
 }
 .we-k {
@@ -945,12 +1021,11 @@ a {
   cursor: pointer;
   background: linear-gradient(#1ddbda, #13c3bb);
   box-shadow: -7px -7px #13c3bb inset;
-}
-.we-know:hover {
-  background: linear-gradient(#13c3bb, #1ddbda);
-}
-.we-know:active {
-  background: linear-gradient(#1ddbda, #13c3bb);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 .back {
   width: 114px;
@@ -958,12 +1033,7 @@ a {
   position: fixed;
   right: 10px;
   bottom: 30px;
-<<<<<<< HEAD
-  cursor: pointer;
-  z-index: 100;
-=======
   z-index: 10;
->>>>>>> 659d995c297b92f40476a8649d70002cecd2c944
   opacity: 0;
   transition: opacity 1s;
   cursor: pointer;
