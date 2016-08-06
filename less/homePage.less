@@ -108,7 +108,7 @@ a{
 .ani{
 	position: absolute;
 	top: 150px;
-	left: 0px;
+	right: 0px;
 	animation: ani_leaf 5s infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
@@ -116,7 +116,7 @@ a{
 @keyframes ani_leaf{
 	0%{
 		top: 150px;
-		left: -100px;
+		right: -100px;
 	}
 	100%{}
 }
@@ -404,7 +404,7 @@ a{
 	overflow: hidden;
 }
 .list{
-	width: 3720px;
+	width: 6975px;
 	height: 190px;
 	position: absolute;
 }
@@ -458,7 +458,7 @@ a{
 }
 //地名部分
 .place-name{
-	width: 97px;
+	width: 110px;
 	height: 40px;
 	border-radius: 15px;
 	background-color:rgba(255,255,255,0.5);
@@ -467,11 +467,12 @@ a{
 	font-size: 18px;
 	font-family: "Microsoft YaHei";
 	position: absolute;
-	top: 280px;
-	left: 560px;
+	top: 290px;
+	left: 580px;
 	cursor: default;
 	z-index: 4;
-	transition: top 1s, left 1s;
+	transition: top 0.5s, left 0.5s;
+	transition-timing-function: linear;
 
 	-moz-user-select:none;
 	-webkit-user-select:none;
@@ -480,49 +481,88 @@ a{
 	user-select:none;
 }
 .place-position img{
-	z-index: 4;
+	z-index: 3;
+	width: 30px;
+	height: 40px;
+	cursor: pointer;
 }
 //老图书馆
 #old-pos{
 	position: absolute;
-	top: 260px;
-	left: 520px;
-	cursor: pointer;
+	top: 310px;
+	left: 540px;
 }
 //太极操场
 #taiJi-pos{
 	position: absolute;
-	top: 120px;
+	top: 130px;
 	left: 396px;
-	cursor: pointer;
 }
-//老校门
-#oldDoor-pos{
+//八十万
+#eightyWc-pos{
 	position: absolute;
-	top: 410px;
-	left: 370px;
-	cursor: pointer;
+	top: 390px;
+	left: 410px;
 }
 //新校门
 #newDoor-pos{
 	position: absolute;
-	top: 370px;
-	left: 220px;
-	cursor: pointer;
+	top: 400px;
+	left: 230px;
 }
 //风雨操场
 #windRain-pos{
 	position: absolute;
-	top: 180px;
-	left: 290px;
-	cursor: pointer;
+	top: 195px;
+	left: 310px;
 }
-//数字图书馆
-#newLib-pos{
+//八教
+#eightBuilding-pos{
+	position: absolute;
+	top: 80px;
+	left: 270px;
+}
+//春华秋实广场
+#spring-pos{
+	position: absolute;
+	top: 340px;
+	left: 480px;
+}
+//二教
+#twoBuilding-pos{
 	position: absolute;
 	top: 310px;
-	left: 270px;
-	cursor: pointer;
+	left: 455px;
+}
+//红房子
+#redBuilding-pos{
+	position: absolute;
+	top: 280px;
+	left: 500px;
+}
+//情人坡
+#love-pos{
+	position: absolute;
+	top: 320px;
+	left: 600px;
+}
+//5栋篮球场
+#basketball-pos{
+	position: absolute;
+	top: 210px;
+	left: 420px;
+}
+//信科
+#shineford-pos{
+	position: absolute;
+	top: 430px;
+	left: 4900px;
+}
+//逸夫楼
+#houseBuilding-pos{
+	position: absolute;
+	top: 240px;
+	left: 190px;
 }
 
 //文案部分
