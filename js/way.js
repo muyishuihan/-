@@ -64,6 +64,7 @@ function clearClass(elem) {
     for (var i = elem.length - 1; i >= 0; i--) {
         elem[i].className = "su_play";
         thrcontent[i].style.display = "none";
+        index_three = 0;
     }
 }
 
@@ -477,3 +478,90 @@ function remove2(){
     qq_det.ondragstart  = mousestop2;
 }
 remove2()
+
+//重邮周边轮播
+
+var life_bottom_left = $("#life_bottom_left");
+    life_bottom_right = $("#life_bottom_right");
+    food_bottom_left = $("#food_bottom_left");
+    food_bottom_right = $("#food_bottom_right");
+    fengjin_bottom_left = $("#fengjin_bottom_left");
+    fengjin_bottom_right = $("#fengjin_bottom_right");
+    list_1 = $(".list_1");
+    list_2 = $(".list_2");
+    list_3 = $(".list_3");
+    index_three = 0;
+    animated_three = false;
+
+
+
+
+function animate_three(offset, list_three){
+    animated_three = true;
+    var newleft = parseInt(list_three.style.left) + offset;
+    var time = 500;  //位移总的时间
+    var interval = 5;  //位移间隔
+    var speed = offset/(time/interval);  //每次位移量
+
+    function go() {
+        if ((speed < 0 && parseInt(list_three.style.left) > newleft) || (speed > 0 && parseInt(list_three.style.left) < newleft)){
+            list_three.style.left = parseInt(list_three.style.left) + speed + "px";
+            setTimeout(go, interval);
+        }else{
+            animated_three = false;
+            list_three.style.left = newleft + 'px';
+            if (newleft > -679) {
+                list_three.style.left = -1358 + "px";
+            }
+            if (newleft < -1358) {
+                list_three.style.left = -679 + "px";
+            }
+        }
+    }
+    go();
+}
+
+function three_right(event) {
+    if (index_three == 1) {
+        index_three = 0;
+    }else{
+        index_three += 1;
+    }
+    if (!animated_three) {
+        animate_three(-679, event);
+    }
+}
+function three_left(event) {
+    if (index_three == 0) {
+        index_three = 1;
+    }else{
+        index_three -= 1;
+    }
+    if (!animated_three) {
+        animate_three(679, event);
+    }
+}
+
+//日常生活
+life_bottom_right.addEventListener("click", function(){
+    three_right(list_1)
+});
+life_bottom_left.addEventListener("click", function(){
+    three_left(list_1)
+});
+
+//周边美食
+food_bottom_right.addEventListener("click", function(){
+    three_right(list_2)
+});
+food_bottom_left.addEventListener("click", function(){
+    three_left(list_2)
+});
+
+//周边美景
+fengjin_bottom_right.addEventListener("click", function(){
+    three_right(list_3)
+});
+fengjin_bottom_left.addEventListener("click", function(){
+    three_left(list_3)
+});

@@ -524,6 +524,7 @@ p {
   position: absolute;
   left: 48px;
   top: 280px;
+  cursor: pointer;
 }
 .arr {
   position: absolute;
@@ -537,17 +538,55 @@ p {
   position: absolute;
   top: 280px;
   right: 50px;
+  cursor: pointer;
 }
 .test_pic {
   width: 679px;
   height: 471px;
-  position: absolute;
+  position: relative;
   top: 100px;
   left: 140px;
+  overflow: hidden;
 }
-.test_pic img {
+.list_1{
+  width: 2716px;
+  height: 471px;
   position: absolute;
   z-index: 15;
+  left: 0;
+}
+.list_1 img {
+  float: left;
+  width: 679px;
+  height: 471px;
+  top: 0;
+  left: 0;
+}
+.list_2{
+  width: 2716px;
+  height: 471px;
+  position: absolute;
+  z-index: 15;
+  left: 0;
+}
+.list_2 img {
+  float: left;
+  width: 679px;
+  height: 471px;
+  top: 0;
+  left: 0;
+}
+.list_3{
+  width: 2716px;
+  height: 471px;
+  position: absolute;
+  z-index: 15;
+  left: 0;
+}
+.list_3 img {
+  float: left;
+  width: 679px;
+  height: 471px;
   top: 0;
   left: 0;
 }
