@@ -84,7 +84,9 @@
 
   float: left;
   font-size: 35px;
-  color: #00b1c6
+  color: #00b1c6;
+  position: relative;
+  top: 3px;
 }
 .iconfont-about{
   font-family:"iconfont" !important;
@@ -96,5 +98,5 @@
 
   float: left;
   font-size: 35px;
-  color: #00b1c6
+  color: #00b1c6;
 }

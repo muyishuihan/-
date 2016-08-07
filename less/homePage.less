@@ -12,6 +12,7 @@ li{
 }
 a{
 	text-decoration: none;
+	color: #333333;
 }
 
 //大背景部分
@@ -38,6 +39,12 @@ a{
 	position: fixed;
 	top: 0px;
 	z-index: 30;
+	animation: nav_move 2s;
+	animation-iteration-count: 1;
+}
+@keyframes nav_move{
+	from{top: -60px;opacity: 0;}
+	to{};
 }
 .nav{
 	width: 985px;
@@ -71,12 +78,14 @@ a{
 	transition-duration: 0.7s;
 }
 .nav-bar li:hover{
-	transform: rotate(10deg);
+	transform: rotate(8deg);
 }
 .hp{
 	height: 50px;
-	color: #82cb83;
 	border-bottom: solid 3px #82cb83;
+}
+.hp a{
+	color: #82cb83;
 }
 .new-s{
 	color: #ffb208;
@@ -472,7 +481,6 @@ a{
 	cursor: default;
 	z-index: 4;
 	transition: top 0.5s, left 0.5s;
-	transition-timing-function: linear;
 
 	-moz-user-select:none;
 	-webkit-user-select:none;

@@ -83,7 +83,7 @@ body {
   height: 120px;
   width: 980.5px;
   position: absolute;
-  display: none;
+  display: block;
   top: 130px;
   left: 2.5px;
   z-index: 8;
@@ -123,7 +123,7 @@ body {
   height: 120px;
   width: 979.5px;
   position: absolute;
-  display: block;
+  display: none;
   top: 130px;
   left: 3.5px;
   z-index: 8;

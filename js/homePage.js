@@ -471,15 +471,55 @@ big_button.addEventListener("click", function(){
 	place_position.style.display = "none";
 
 	switch (parseFloat(getStyle(place,"left"))) {
-		case 580 || 495 || 520 || 540 || 640://老图，二教，春华秋实，红房子，情人坡
+		case 580://老图
 			big_map.style.left = -1209 + "px"; //ok
 			big_map.style.top = -1117 + "px";
 			break;
-		case 436 || 350 || 460: //太极，风雨，篮球
+		case 495://二教
+			big_map.style.left = -1209 + "px"; //ok
+			big_map.style.top = -1117 + "px";
+			break;
+		case 520://春华秋实
+			big_map.style.left = -1209 + "px"; //ok
+			big_map.style.top = -1117 + "px";
+			break;
+		case 540://红房子
+			big_map.style.left = -1209 + "px"; //ok
+			big_map.style.top = -1117 + "px";
+			break;
+		case 640://情人坡
+			big_map.style.left = -1209 + "px"; //ok
+			big_map.style.top = -1117 + "px";
+			break;
+		case 436: //太极
 			big_map.style.left = -947 + "px";//ok
 			big_map.style.top = -644 + "px";
 			break;
-		case 450 || 230: //八十万，信科
+		case 350: //风雨
+			big_map.style.left = -947 + "px";//ok
+			big_map.style.top = -644 + "px";
+			break;
+		case 460: //篮球
+			big_map.style.left = -947 + "px";//ok
+			big_map.style.top = -644 + "px";
+			break;
+		case 436: //太极
+			big_map.style.left = -947 + "px";//ok
+			big_map.style.top = -644 + "px";
+			break;
+		case 350: //风雨
+			big_map.style.left = -947 + "px";//ok
+			big_map.style.top = -644 + "px";
+			break;
+		case 460: //篮球
+			big_map.style.left = -947 + "px";//ok
+			big_map.style.top = -644 + "px";
+			break;
+		case 450: //八十万
+			big_map.style.left = -995 + "px";//ok
+			big_map.style.top = -1401 + "px";
+			break;
+		case 230: //信科
 			big_map.style.left = -995 + "px";//ok
 			big_map.style.top = -1401 + "px";
 			break;
