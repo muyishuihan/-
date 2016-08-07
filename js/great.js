@@ -37,6 +37,8 @@ function play_fc(){
     if (sub_nav_g[0].className == "clicked") {
             third_nav.style.display = "block";
             college_club.style.display = "block";
+            dis_nav(t_n_c,"great_unclick");
+            t_n_c[0].className = "great_click";
         } ;
     if (sub_nav_g[1].className == "clicked") {
             great_vedio.style.display = "block";

@@ -548,6 +548,15 @@ p {
   left: 140px;
   overflow: hidden;
 }
+.yelBorder {
+  width: 659px;
+  height:451px;
+  border: 10px solid #fef4b6;
+  position: absolute;
+  z-index: 20;
+  top:0;
+  left:0;
+}
 .list_1{
   width: 2716px;
   height: 471px;
@@ -599,7 +608,7 @@ p {
   z-index: 15;
   background: #000000;
   opacity: 0.5;
-  display: none;
+  display: block;
 }
 .food_det_c {
   position: absolute;
