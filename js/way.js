@@ -33,6 +33,8 @@ surround.addEventListener("click",function () {
     playCqupt.id = "unclick";
     thrnav.style.display = "block";
     fivnav.style.display = "none";
+    clearClass(thrtabs);
+    thrtabs[0].className = ("su_play_click");
     notShow(fivcontent);
     thrcontent[0].style.display = "block";
 });
@@ -43,6 +45,8 @@ playCqupt.addEventListener("click",function () {
     surround.id = "unclick";
     fivnav.style.display = "block";
     thrnav.style.display = "none";
+    clearName(fivtabs);
+    fivtabs[0].className = "strategy_way_click";
     notShow(thrcontent);
     fivcontent[0].style.display = "block";
 });
