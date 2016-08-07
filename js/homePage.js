@@ -110,11 +110,11 @@ function change(event, num){
 }
 
 if (month == 8 && year == 2016){
-    day = 31+5;
+    day = 31+9;
 }else if (month == 9 && year == 2016) {
-    day = 5;
+    day = 9;
 }else {
-	stop = 1
+	stop = 1;
 }
 
 function timeChange(stop) {
@@ -126,7 +126,8 @@ function timeChange(stop) {
         sec = timeNew.getSeconds();
         min = timeNew.getMinutes();
         hour = timeNew.getHours();
-        dayNew = day - timeNew.getDay();
+        dayNew = day - timeNew.getDate();
+        // console.log(timeNew.getDay())
 
     if (nextTime < 0) nextTime = 0;
 
