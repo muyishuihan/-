@@ -58,29 +58,32 @@ body {
   float: left;
   text-align: center;
   cursor: pointer;
+  
 }
-.surround {
+#surround {
   border-top-left-radius: 22.5px;
   border-bottom-left-radius: 22.5px;
 }
-.play_cqupt {
+#play_cqupt {
   border-top-right-radius: 22.5px;
   border-bottom-right-radius: 22.5px;
+
 }
-#unclick {
+.clicked {
   background-color: #7ad8d3;
   color: #ffffff;
 }
-#clicked {
+.unclick {
   background-color: #fee04b;
   color: #f5a73a;
+
 }
 
 #third_nav {
   height: 120px;
   width: 977.5px;
   position: absolute;
-  display: none;
+  display: block;
   top: 130px;
   left: 5.5px;
   z-index: 10;
@@ -123,7 +126,7 @@ body {
   height: 699px;
   position: absolute;
   left: 20px;
-  display: none;
+  display: block;
   top: 173px;
   z-index: 12;
 }
@@ -414,7 +417,7 @@ body {
   height: 699px;
   position: absolute;
   left: 20px;
-  display: block;
+  display: none;
   top: 173px;
 }
 .left_a {
