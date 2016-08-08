@@ -1,3 +1,6 @@
+
+//三级导航
+
 var sub_nav_g = document.querySelector('#sub_nav_g').children,
     third_nav = document.querySelector('#third_nav'),
     college_club = document.querySelector('#college_club'), 
@@ -118,6 +121,59 @@ for (var i = left_side.length - 1; i >= 0; i--) {
         play_cl();
     })
 }
+
+
+
+//图片轮播
+var left_aq = document.querySelector('.left_aq'),
+    right_aq = document.querySelector('.right_aq'),
+    vedio_group_one = document.querySelector('.vedio_group_one'),
+    vedio_group_two = document.querySelector('.vedio_group_two'),
+    vedio_group_three = document.querySelector('.vedio_group_three'),
+    count_tech = 1;
+left_aq.addEventListener('click',function () {
+    if (count_tech == 1) {
+        vedio_group_one.style.display = "block";
+        vedio_group_two.style.display = "none";
+        vedio_group_three.style.display = "none";
+        count_tech =1;
+        console.log(count_tech);
+    }else if (count_tech == 2) {
+        vedio_group_one.style.display = "block";
+        vedio_group_two.style.display = "none";
+        vedio_group_three.style.display = "none";
+        count_tech = 1;
+        console.log(count_tech);
+    }else if (count_tech == 3) {
+        vedio_group_one.style.display = "none";
+        vedio_group_two.style.display = "block";
+        vedio_group_three.style.display = "none";
+        count_tech = 2;
+        console.log(count_tech);
+    };
+});
+right_aq.addEventListener('click',function () {
+    if (count_tech == 1) {
+        vedio_group_one.style.display = "none";
+        vedio_group_two.style.display = "block";
+        vedio_group_three.style.display = "none";
+        count_tech =2;
+        console.log(count_tech);
+    }else if (count_tech == 2) {
+        vedio_group_one.style.display = "none";
+        vedio_group_two.style.display = "none";
+        vedio_group_three.style.display = "block";
+        count_tech = 3;
+        console.log(count_tech);
+    }else if (count_tech == 3) {
+        vedio_group_one.style.display = "none";
+        vedio_group_two.style.display = "none";
+        vedio_group_three.style.display = "block";
+        console.log(count_tech);
+        count_tech = 3;
+    };
+});
+
 
 
 //封装

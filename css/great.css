@@ -414,9 +414,63 @@ body {
     left:0;
     z-index: 15;
 }
+.left_aq img {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 15;
+}
+.right_aq img {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 15;
+}
+.left_aq {
+  width: 29px;
+    height:51px;
+    position: absolute;
+    top: 300px;
+    left:20px;
+}
+.right_aq {
+    width: 29px;
+    height:51px;
+    position: absolute;
+    top: 300px;
+    right:20px;
+}
 .vedio_group {
     width:840px;
     height:720px;
+    position: absolute;
+    display:block;
+    top:-30px;
+    left: 80px;
+    z-index: 18;
+}
+.vedio_group_one {
+    width:840px;
+    height:720px;
+    display: block;
+    position: absolute;
+    top:-30px;
+    left: 80px;
+    z-index: 18;
+}
+.vedio_group_two {
+  width:840px;
+    height:720px;
+    display:none;
+    position: absolute;
+    top:-30px;
+    left: 80px;
+    z-index: 18;
+}
+.vedio_group_three {
+   width:840px;
+    height:720px;
+    display:none;
     position: absolute;
     top:-30px;
     left: 80px;
@@ -436,6 +490,13 @@ body {
     position: absolute;
     top:0;
     left:0;
+}
+.vedio_pic img {
+  width: 250px;
+  height: 160px;
+  position: absolute;
+  top:0;
+  left:0;
 }
 .vedio_sig span {
     width:250px;
