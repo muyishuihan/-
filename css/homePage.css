@@ -81,9 +81,7 @@ a {
 .hp {
   height: 50px;
   border-bottom: solid 3px #82cb83;
-}
-.hp a {
-  color: #82cb83;
+  color: #82cb83
 }
 .new-s {
   color: #ffb208;

@@ -123,7 +123,7 @@ body {
 
 #college_club {
   width: 963px;
-  height: 699px;
+  height: 710px;
   position: absolute;
   left: 20px;
   display: block;
@@ -132,7 +132,7 @@ body {
 }
 #left_sid {
   width: 70px;
-  height: 699px;
+  height: 710px;
   position: absolute;
   top: 0;
   color: #ffffff;
@@ -168,65 +168,34 @@ body {
 #teen_volum {
     padding-top: 5px;
 }
-#tuanwei_det {
+.school_content{
+  height: 710px;
   width: 893px;
+  margin-left: 70px;
   position: relative;
   z-index: 15;
-  height:1350px;
   color: #c89c66;
-  display:none;
-  margin-left: 70px;
   background-color: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#tuanwei_det {
+  display:block;
  }
  #col_stu_union_det {
-  width: 893px;
-  position: relative;
-  z-index: 15;
-  height:2310px;
-  display:block;
-  color: #c89c66;
-  margin-left: 70px;
-  background-color: #ffffff;
+  display:none;
  }
  #sci_union_det {
-    width: 893px;
-  position: relative;
-  z-index: 15;
-  height:1210px;
   display:none;
-  color: #c89c66;
-  margin-left: 70px;
-  background-color: #ffffff;
  }
  #club_union_det {
-    width: 893px;
-  position: relative;
-  z-index: 15;
-  height:920px;
   display:none;
-  color: #c89c66;
-  margin-left: 70px;
-  background-color: #ffffff;
  }
  #teen_volum_det {
-    width: 893px;
-  position: relative;
-  z-index: 15;
-  height:1750px;
   display:none;
-  color: #c89c66;
-  margin-left: 70px;
-  background-color: #ffffff;
  }
  #stu_art_det {
-    width: 893px;
-  position: relative;
-  z-index: 15;
-  height:711px;
   display:none;
-  color: #c89c66;
-  margin-left: 70px;
-  background-color: #ffffff;
  }
  .club_add {
     position: absolute;
@@ -243,7 +212,7 @@ body {
     z-index: 16;
  }
  .float_line {
-  width: 12px;
+  width: 16px;
   height: 711px;
   background-color: #ffee89;
   position: absolute;
@@ -254,7 +223,7 @@ body {
   right: 0;
 }
 .flaot_d {
-  width: 10px;
+  width: 14px;
   height: 300px;
   position: absolute;
   top: 0;
@@ -264,23 +233,22 @@ body {
   border-radius: 5px;
 }
  .club_det {
-  width: 882px;
+  width: 789px;
   position: absolute;
   top: 330px;
+  left: 40px;
 }
 .club_det span {
   position: relative;
   line-height: 60px;
-  width: 893px;
+  width: 789px;
   height: 60px;
   margin-top: 20px;
-  margin-left: 30px;
   font-size: 16px;
   float: left;
 }
 .club_det p {
   position: relative;
-  margin-left: 30px;
   line-height: 50px;
   font-size: 14px;
 }
