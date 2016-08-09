@@ -58,32 +58,28 @@ body {
   float: left;
   text-align: center;
   cursor: pointer;
-  
 }
-#surround {
+.surround {
   border-top-left-radius: 22.5px;
   border-bottom-left-radius: 22.5px;
 }
-#play_cqupt {
+.play_cqupt {
   border-top-right-radius: 22.5px;
   border-bottom-right-radius: 22.5px;
-
 }
-.clicked {
+#unclick {
   background-color: #7ad8d3;
   color: #ffffff;
 }
-.unclick {
+#clicked {
   background-color: #fee04b;
   color: #f5a73a;
-
 }
-
 #third_nav {
   height: 120px;
   width: 977.5px;
   position: absolute;
-  display: block;
+  display: none;
   top: 130px;
   left: 5.5px;
   z-index: 10;
@@ -118,21 +114,18 @@ body {
   text-align: center;
   cursor: pointer;
 }
-
-
-
 #college_club {
   width: 963px;
-  height: 710px;
+  height: 699px;
   position: absolute;
   left: 20px;
-  display: block;
+  display: none;
   top: 173px;
   z-index: 12;
 }
 #left_sid {
   width: 70px;
-  height: 710px;
+  height: 699px;
   position: absolute;
   top: 0;
   color: #ffffff;
@@ -154,65 +147,96 @@ body {
 .span_font {
   margin-left: 25px;
   width: 20px;
-  height:114.5px;
+  height: 114.5px;
 }
 #col_stu_union {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 #sci_union {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 #club_union {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 #teen_volum {
-    padding-top: 5px;
-}
-.school_content{
-  height: 710px;
-  width: 893px;
-  margin-left: 70px;
-  position: relative;
-  z-index: 15;
-  color: #c89c66;
-  background-color: #ffffff;
-  overflow-y: auto;
-  overflow-x: hidden;
+  padding-top: 5px;
 }
 #tuanwei_det {
-  display:block;
- }
- #col_stu_union_det {
-  display:none;
- }
- #sci_union_det {
-  display:none;
- }
- #club_union_det {
-  display:none;
- }
- #teen_volum_det {
-  display:none;
- }
- #stu_art_det {
-  display:none;
- }
- .club_add {
-    position: absolute;
-    top:40px;
-    left:210px;
-    width: 480px;
-    height:288px;
-    overflow: hidden;
- }
- .club_add img {
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: 16;
- }
- .float_line {
-  width: 16px;
+  width: 893px;
+  position: relative;
+  z-index: 15;
+  height: 1350px;
+  color: #c89c66;
+  display: none;
+  margin-left: 70px;
+  background-color: #ffffff;
+}
+#col_stu_union_det {
+  width: 893px;
+  position: relative;
+  z-index: 15;
+  height: 2310px;
+  display: block;
+  color: #c89c66;
+  margin-left: 70px;
+  background-color: #ffffff;
+}
+#sci_union_det {
+  width: 893px;
+  position: relative;
+  z-index: 15;
+  height: 1210px;
+  display: none;
+  color: #c89c66;
+  margin-left: 70px;
+  background-color: #ffffff;
+}
+#club_union_det {
+  width: 893px;
+  position: relative;
+  z-index: 15;
+  height: 920px;
+  display: none;
+  color: #c89c66;
+  margin-left: 70px;
+  background-color: #ffffff;
+}
+#teen_volum_det {
+  width: 893px;
+  position: relative;
+  z-index: 15;
+  height: 1750px;
+  display: none;
+  color: #c89c66;
+  margin-left: 70px;
+  background-color: #ffffff;
+}
+#stu_art_det {
+  width: 893px;
+  position: relative;
+  z-index: 15;
+  height: 711px;
+  display: none;
+  color: #c89c66;
+  margin-left: 70px;
+  background-color: #ffffff;
+}
+.club_add {
+  position: absolute;
+  top: 40px;
+  left: 210px;
+  width: 480px;
+  height: 288px;
+  overflow: hidden;
+}
+.club_add img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 16;
+}
+.float_line {
+  width: 12px;
   height: 711px;
   background-color: #ffee89;
   position: absolute;
@@ -223,7 +247,7 @@ body {
   right: 0;
 }
 .flaot_d {
-  width: 14px;
+  width: 10px;
   height: 300px;
   position: absolute;
   top: 0;
@@ -232,32 +256,30 @@ body {
   background-color: #fff9d3;
   border-radius: 5px;
 }
- .club_det {
-  width: 789px;
+.club_det {
+  width: 882px;
   position: absolute;
   top: 330px;
-  left: 40px;
 }
 .club_det span {
   position: relative;
   line-height: 60px;
-  width: 789px;
+  width: 893px;
   height: 60px;
   margin-top: 20px;
+  margin-left: 30px;
   font-size: 16px;
   float: left;
 }
 .club_det p {
   position: relative;
+  margin-left: 30px;
   line-height: 50px;
   font-size: 14px;
 }
-
-
-
 /*学生社团*/
 #stu_club {
-    width: 963px;
+  width: 963px;
   height: 699px;
   position: absolute;
   left: 20px;
@@ -266,9 +288,9 @@ body {
   z-index: 15;
 }
 .qq_bg {
-    position: absolute;
-    top:0;
-    left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .road_line {
   width: 180px;
@@ -279,7 +301,7 @@ body {
   float: left;
 }
 .road_line_det {
-     width: 700px;
+  width: 700px;
   line-height: 41px;
   vertical-align: middle;
   font-size: 14px;
@@ -299,32 +321,27 @@ body {
   left: 38px;
 }
 #study_n {
-    position: absolute;
-    top: 205px;
-    left:38px;
+  position: absolute;
+  top: 205px;
+  left: 38px;
 }
 #art_n {
-    top:287px;
-    position: absolute;
-    left:38px;
+  top: 287px;
+  position: absolute;
+  left: 38px;
 }
 #pe_n {
-    top:451px;
-    position: absolute;
-    left:38px;
+  top: 451px;
+  position: absolute;
+  left: 38px;
 }
 #volum_n {
-    top:533px;
-    position: absolute;
-    left: 38px;
+  top: 533px;
+  position: absolute;
+  left: 38px;
 }
-
-
-
-
-
 #redrock_club {
-    width: 963px;
+  width: 963px;
   height: 699px;
   position: absolute;
   left: 20px;
@@ -332,26 +349,26 @@ body {
   top: 173px;
 }
 .red_bg {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
 }
 .red_logo {
-    position: absolute;
-    top: 40px;
-    z-index: 16;
-    left: 220px;
+  position: absolute;
+  top: 40px;
+  z-index: 16;
+  left: 220px;
 }
 #red_cl_d {
-    position: absolute;
-    top:287px;
-    left:38px;
-    width: 887px;
-    height: 41px;
-    line-height: 41px;
-    vertical-align: middle;
-    z-index: 16;
+  position: absolute;
+  top: 287px;
+  left: 38px;
+  width: 887px;
+  height: 41px;
+  line-height: 41px;
+  vertical-align: middle;
+  z-index: 16;
 }
 .red_d {
   width: 700px;
@@ -360,12 +377,8 @@ body {
   font-size: 14px;
   color: #c99c68;
 }
-
-
-
-
 #great_vedio {
-    width: 963px;
+  width: 963px;
   height: 699px;
   position: absolute;
   left: 20px;
@@ -373,7 +386,7 @@ body {
   top: 173px;
 }
 #great_tech {
-   width: 963px;
+  width: 963px;
   height: 699px;
   position: absolute;
   left: 20px;
@@ -381,134 +394,73 @@ body {
   top: 173px;
 }
 #great_stu {
-    width: 963px;
+  width: 963px;
   height: 699px;
   position: absolute;
   left: 20px;
-  display: none;
+  display: block;
   top: 173px;
 }
 .left_a {
-    width: 29px;
-    height:51px;
-    position: absolute;
-    top: 300px;
-    left:20px;
+  width: 29px;
+  height: 51px;
+  position: absolute;
+  top: 300px;
+  left: 20px;
 }
 .left_a img {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
 }
 .right_a {
-    width: 29px;
-    height:51px;
-    position: absolute;
-    top: 300px;
-    right:20px;
+  width: 29px;
+  height: 51px;
+  position: absolute;
+  top: 300px;
+  right: 20px;
 }
 .right_a img {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 15;
-}
-.left_aq img {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 15;
-}
-.right_aq img {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 15;
-}
-.left_aq {
-  width: 29px;
-    height:51px;
-    position: absolute;
-    top: 300px;
-    left:20px;
-}
-.right_aq {
-    width: 29px;
-    height:51px;
-    position: absolute;
-    top: 300px;
-    right:20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
 }
 .vedio_group {
-    width:840px;
-    height:720px;
-    position: absolute;
-    display:block;
-    top:-30px;
-    left: 80px;
-    z-index: 18;
-}
-.vedio_group_one {
-    width:840px;
-    height:720px;
-    display: block;
-    position: absolute;
-    top:-30px;
-    left: 80px;
-    z-index: 18;
-}
-.vedio_group_two {
-  width:840px;
-    height:720px;
-    display:none;
-    position: absolute;
-    top:-30px;
-    left: 80px;
-    z-index: 18;
-}
-.vedio_group_three {
-   width:840px;
-    height:720px;
-    display:none;
-    position: absolute;
-    top:-30px;
-    left: 80px;
-    z-index: 18;
+  width: 840px;
+  height: 720px;
+  position: absolute;
+  top: -30px;
+  left: 80px;
+  z-index: 18;
 }
 .vedio_sig {
-    width: 250px;
-    height:210px;
-    position: relative;
-    padding-left: 30px;
-    padding-top: 30px;
-    float: left;
+  width: 250px;
+  height: 210px;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 30px;
+  float: left;
 }
 .vedio_pic {
-    width: 250px;
-    height:160px;
-    position: absolute;
-    top:0;
-    left:0;
-}
-.vedio_pic img {
   width: 250px;
   height: 160px;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 .vedio_sig span {
-    width:250px;
-    height: 60px;
-    background-color: #ffffff;
-    line-height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 18px;
-    position: absolute;
-    top: 160px;
-    left:0;
-    z-index: 20;
-    color: #ffb080;
-} 
+  width: 250px;
+  height: 60px;
+  background-color: #ffffff;
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  position: absolute;
+  top: 160px;
+  left: 0;
+  z-index: 20;
+  color: #ffb080;
+}

@@ -1,0 +1,205 @@
+body,
+p {
+  margin: 0;
+  position: 0;
+}
+body {
+  font-family: "Microsoft YaHei";
+}
+.background_small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1230px;
+  height: 1849px;
+  z-index: -2;
+}
+.bg_small {
+  width: 100%;
+  height: 1849px;
+}
+.help-content {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -95px;
+  width: 1003px;
+  height: 896px;
+}
+.help-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+#help-flag {
+  position: absolute;
+  left: 390px;
+  top: -85px;
+  width: 218px;
+  height: 98px;
+}
+#help-flag img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+#tabs {
+  position: absolute;
+  top: 58px;
+  left: 23px;
+  width: 942px;
+  height: 130px;
+  z-index: 8;
+}
+#tabs .tabs-unclick {
+  position: relative;
+  float: left;
+  margin-left: 22px;
+  width: 209px;
+  height: 130px;
+  line-height: 45px;
+  background: url(../image/branch_3/tab_unclick.png);
+  font-size: 20px;
+  text-align: center;
+  color: #ffb31f;
+  cursor: pointer;
+  z-index: 9;
+}
+#tabs .tabs-clicked {
+  position: relative;
+  float: left;
+  margin-top: -15px;
+  margin-left: 22px;
+  width: 220px;
+  height: 130px;
+  line-height: 58px;
+  background: url(../image/branch_3/tab_clicked.png);
+  font-size: 22px;
+  text-align: center;
+  color: #ffb31f;
+  cursor: pointer;
+  z-index: 9;
+}
+#life-content {
+  position: absolute;
+  top: 102px;
+  left: 44px;
+  width: 942px;
+  height: 695px;
+  z-index: 10px;
+}
+#life-content .question-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+#life-content .questions-title {
+  position: absolute;
+  top: 0;
+  left: 21px;
+  width: 870px;
+  height: 47px;
+  line-height: 47px;
+  font-size: 16px;
+  color: #feab0e;
+}
+#life-content .questions-title span {
+  width: 80px;
+  float: left;
+  text-align: left;
+}
+#life-content .questions-title .title-questioner {
+  margin-left: 552px;
+}
+#life-content .questions-title .title-ask-time {
+  float: right;
+}
+.questions {
+  position: absolute;
+  left: 21px;
+  width: 870px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #b58043;
+}
+.questions .question-con {
+  float: left;
+  display: block;
+  width: 633px;
+}
+.questions .questioner {
+  width: 80px;
+  margin-right: 78px;
+}
+.questions .ask-time {
+  float: right;
+  width: 80px;
+}
+#questions-1 {
+  top: 47px;
+}
+#questions-2 {
+  top: 89px;
+}
+#questions-3 {
+  top: 131px;
+}
+#questions-4 {
+  top: 173px;
+}
+#questions-5 {
+  top: 215px;
+}
+#questions-6 {
+  top: 257px;
+}
+.seniors {
+  position: absolute;
+  top: 369px;
+  left: -26.25px;
+  width: 942px;
+  height: 221px;
+  z-index: 11;
+}
+.senior-list {
+  float: left;
+  width: 162px;
+  height: 221px;
+  margin-left: 26.25px;
+  font-size: 12px;
+  color: #d1ab82;
+  text-align: center;
+  background-color: #ffffff;
+}
+.senior-list .senior-name {
+  margin-top: 10px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: #febe5d;
+}
+#remind {
+  position: absolute;
+  top: 624px;
+  width: 915px;
+  height: 70px;
+  z-index: 11;
+  background-color: #ffffff;
+  border: #fff5c4 1px solid;
+  border-radius: 5px;
+}
+#remind div {
+  float: left;
+  padding-top: 25px;
+  padding-left: 244px;
+}
+#remind span {
+  margin-left: 17px;
+  width: 404px;
+  font-size: 16px;
+  color: #f89316;
+  line-height: 70px;
+}
