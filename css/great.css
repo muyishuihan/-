@@ -59,19 +59,19 @@ body {
   text-align: center;
   cursor: pointer;
 }
-.surround {
+#surround {
   border-top-left-radius: 22.5px;
   border-bottom-left-radius: 22.5px;
 }
-.play_cqupt {
+#play_cqupt {
   border-top-right-radius: 22.5px;
   border-bottom-right-radius: 22.5px;
 }
-#unclick {
+.unclick {
   background-color: #7ad8d3;
   color: #ffffff;
 }
-#clicked {
+.clicked {
   background-color: #fee04b;
   color: #f5a73a;
 }
@@ -79,7 +79,7 @@ body {
   height: 120px;
   width: 977.5px;
   position: absolute;
-  display: none;
+  display: block;
   top: 130px;
   left: 5.5px;
   z-index: 10;
@@ -119,7 +119,7 @@ body {
   height: 699px;
   position: absolute;
   left: 20px;
-  display: none;
+  display: block;
   top: 173px;
   z-index: 12;
 }
@@ -398,7 +398,7 @@ body {
   height: 699px;
   position: absolute;
   left: 20px;
-  display: block;
+  display: none;
   top: 173px;
 }
 .left_a {
@@ -427,10 +427,64 @@ body {
   left: 0;
   z-index: 15;
 }
+.left_aq img {
+     position: absolute;
+     top:0;
+     left:0;
+     z-index: 15;
+ }
+ .right_aq img {
+     position: absolute;
+     top:0;
+     left:0;
+     z-index: 15;
+ }
+ .left_aq {
+   width: 29px;
+     height:51px;
+     position: absolute;
+     top: 300px;
+     left:20px;
+ }
+ .right_aq {
+     width: 29px;
+     height:51px;
+     position: absolute;
+     top: 300px;
+     right:20px;
+ }
 .vedio_group {
   width: 840px;
   height: 720px;
   position: absolute;
+  display:block;
+  top: -30px;
+  left: 80px;
+  z-index: 18;
+}
+.vedio_group_one {
+  width: 840px;
+  height: 720px;
+  position: absolute;
+  display:block;
+  top: -30px;
+  left: 80px;
+  z-index: 18;
+}
+.vedio_group_two {
+  width: 840px;
+  height: 720px;
+  position: absolute;
+  display:none;
+  top: -30px;
+  left: 80px;
+  z-index: 18;
+}
+.vedio_group_three {
+  width: 840px;
+  height: 720px;
+  position: absolute;
+  display:none;
   top: -30px;
   left: 80px;
   z-index: 18;
@@ -444,6 +498,13 @@ body {
   float: left;
 }
 .vedio_pic {
+  width: 250px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vedio_pic img {
   width: 250px;
   height: 160px;
   position: absolute;
