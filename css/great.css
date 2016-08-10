@@ -68,12 +68,14 @@ body {
   border-bottom-right-radius: 22.5px;
 }
 .unclick {
-  background-color: #7ad8d3;
-  color: #ffffff;
-}
-.clicked {
   background-color: #fee04b;
   color: #f5a73a;
+  box-shadow: 0 -5px #fcd320 inset;
+}
+.clicked {
+  background-color: #7ad8d3;
+  color: #ffffff;
+  box-shadow: 0 -5px #63d0ce inset; 
 }
 #third_nav {
   height: 120px;
