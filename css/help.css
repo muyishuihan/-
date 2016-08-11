@@ -117,45 +117,32 @@ body {
 #life-content .questions-title .title-ask-time {
   float: right;
 }
-.questions {
+.question-content {
   position: absolute;
-  left: 21px;
+  top: 47px;
+  width: 914px;
+  height: 287px;
+}
+.question-content .questions {
+  margin-left: 21px;
   width: 870px;
   height: 42px;
   line-height: 42px;
   font-size: 14px;
   color: #b58043;
 }
-.questions .question-con {
+.question-content .questions .question-con {
   float: left;
   display: block;
   width: 633px;
 }
-.questions .questioner {
+.question-content .questions .questioner {
   width: 80px;
   margin-right: 78px;
 }
-.questions .ask-time {
+.question-content .questions .ask-time {
   float: right;
   width: 80px;
-}
-#questions-1 {
-  top: 47px;
-}
-#questions-2 {
-  top: 89px;
-}
-#questions-3 {
-  top: 131px;
-}
-#questions-4 {
-  top: 173px;
-}
-#questions-5 {
-  top: 215px;
-}
-#questions-6 {
-  top: 257px;
 }
 .seniors {
   position: absolute;
