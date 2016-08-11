@@ -130,7 +130,19 @@ var left_aq = document.querySelector('.left_aq'),
     vedio_group_one = document.querySelector('.vedio_group_one'),
     vedio_group_two = document.querySelector('.vedio_group_two'),
     vedio_group_three = document.querySelector('.vedio_group_three'),
+    stu_group = document.querySelector('.stu_group'),
+    stu_group_two = document.querySelector('.stu_group_two'),
+    left_stu = document.querySelector('.left_stu'),
+    right_stu =document.querySelector('.right_stu'),
     count_tech = 1;
+left_stu.addEventListener('click',function () {
+    stu_group.style.display = "block";
+    stu_group_two.style.display = "none";
+});
+right_stu.addEventListener('click',function () {
+    stu_group.style.display = "none";
+    stu_group_two.style.display = "block";
+})
 left_aq.addEventListener('click',function () {
     if (count_tech == 1) {
         vedio_group_one.style.display = "block";
