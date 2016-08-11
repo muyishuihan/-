@@ -81,8 +81,6 @@ a {
 .hp {
   height: 50px;
   border-bottom: solid 3px #82cb83;
-}
-.hp a {
   color: #82cb83;
 }
 .new-s {
@@ -546,7 +544,7 @@ a {
 #shineford-pos {
   position: absolute;
   top: 430px;
-  left: 4900px;
+  left: 500px;
 }
 #houseBuilding-pos {
   position: absolute;

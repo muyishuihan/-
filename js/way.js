@@ -396,13 +396,13 @@ function four_buttom() {
     var top = entr_flaot_d.offsetTop;
         four_new = dom("#left_side_det").children;
         num = 0;
-    if (top >= 0 && top < 380) {
+    if (top >= 0 && top < 379) {
         num = 0;
         four_new[1].style.background = "#fed18d"
         four_new[2].style.background = "#fed18d"
         four_new[3].style.background = "#fed18d"
     }
-    if (top >= 380 && top < 419) {
+    if (top >= 379 && top < 419) {
         num = 1;
         four_new[0].style.background = "#fed18d"
         four_new[2].style.background = "#fed18d"
@@ -422,6 +422,50 @@ function four_buttom() {
     }
     four_new[num].style.background = "#9ae4e9"
 }
+//须知按动按钮
+var left_side_det = dom('#left_side_det')
+left_side_det.addEventListener("click", function (e) {
+    // console.log(e.target)
+    if (e.target.className == "four_new_click") {
+        contentChange(e.target, e.target.children[0].id);
+    }
+    if (e.target.className == "four_new") {
+        contentChange(e.target, e.target.children[0].id);
+    }
+    if (e.target.className == "cut_top") {
+        contentChange(e.target.parentNode, e.target.id);
+    }
+    if (e.target.className == "cut_t") {
+        contentChange(e.target.parentNode. e.target.id);
+    }
+});
+function contentChange(event, event1){
+    for (var i = 0; i < left_side_det.children.length; i++) {
+        left_side_det.children[i].style.background = "#fed18d";
+    }
+    event.style.background = "#9ae4e9";
+
+    switch (event1) {
+        case "know1":
+            must_det.scrollTop = 0;
+            entr_flaot_d.style.top = 0 + "px";
+            break;
+        case "know2":
+            must_det.scrollTop = 5986;
+            entr_flaot_d.style.top = 379 + "px";
+            break;
+        case "know3":
+            must_det.scrollTop = 6617;
+            entr_flaot_d.style.top = 419 + "px";
+            break;
+        case "know4":
+            must_det.scrollTop = 8560;
+            entr_flaot_d.style.top = 542 + "px";
+            break;
+    }
+}
+
+
 
 //须知按动滚
 function mousedown1() {

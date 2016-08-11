@@ -77,26 +77,6 @@ function dis_cl(){
     bo_no(teen_volum);
     bo_no(stu_art);
 };
-function play_cl(){
-    if (left_side[0].className == "col_club_class_click") {
-            tuanwei.style.display = "block";
-        };
-    if (left_side[1].className == "col_club_class_click") {
-            stu_union.style.display = "block";
-        };
-    if (left_side[2].className == "col_club_class_click") {
-            sci_union.style.display = "block";
-        };
-    if (left_side[3].className == "col_club_class_click") {
-            club_union.style.display = "block";
-        }
-    if (left_side[4].className == "col_club_class_click") {
-            teen_volum.style.display = "block";
-        };
-    if (left_side[5].className == "col_club_class_click") {
-            stu_art.style.display = "block";
-        };
-}
 for (var i = sub_nav_g.length - 1; i >= 0; i--) {
     sub_nav_g[i].addEventListener('click', function(){
         dis_nav(sub_nav_g,"unclick");
@@ -111,14 +91,6 @@ for (var i = t_n_c.length - 1; i >= 0; i--) {
         dis_club();
         this.className = "great_click";
         play_club();
-    })
-}
-for (var i = left_side.length - 1; i >= 0; i--) {
-    left_side[i].addEventListener('click',function(){
-        dis_nav(left_side,"col_club_class");
-        dis_cl();
-        this.className = "col_club_class_click";
-        play_cl();
     })
 }
 
@@ -195,6 +167,64 @@ var getStyle = function(dom,attr){
 
 var dom = function (event) {
     return document.querySelector(event);
+};
+function indexOf(arr,value,start){
+  //如果不设置start,则默认start为0
+  if(arguments.length == 2){
+    start = 0;
+  }
+  //如果数组中存在indexOf方法，则用原生的indexOf方法
+  if(arr.indexOf){
+    return arr.indexOf(value,start);
+  }
+  for( var i = 0; i < arr.length; i++){
+    if(arr[i] === value){
+      return i;
+    }
+  }
+  return -1;
+}
+//数组去重方法封装
+function noRepeat(arr){
+  var result = [];
+  for( var i = 0; i < arr.length; i++){
+    if(indexOf(result,arr[i]) == -1){
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+//inArray方法封装
+function inArray(arr,value){
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] === value){
+      return true;
+    }
+  }
+  return false;
+}
+//去除首尾空格函数封装
+function trim(arr){
+  var result = arr.replace(/^\s+|\s+dom/g,'');
+  return result;
+}
+function addClass(obj,classStr){
+  var array = noRepeat(trim(obj.className).split('\s+'));
+  if(!inArray(array,classStr)){
+    array.push(classStr);
+  }
+  obj.className = array.join(' ');
+  return obj;
+}
+
+function removeClass(obj,classStr){
+  var array = noRepeat(trim(obj.className).split('\s+'));
+  var index = indexOf(array,classStr);
+  if(index != -1){
+    array.splice(index,1);
+    obj.className = array.join(' ');
+  }
+  return obj;
 };
 
 
@@ -352,5 +382,153 @@ var dom = function (event) {
         }
     };
     setTimeout(_timeChange(stop), 1000);
+
+})();
+
+
+//滚动条
+(function(){
+
+    var college_club = dom('#college_club');
+        school_details = dom('#school_details');
+        float_line = dom('#float_line');
+        flaot_d = dom('#flaot_d');
+        body = dom('body')
+        left_sid = dom('#left_sid');
+
+    var move = 0;
+        Y1 = 0;
+
+    school_details.onscroll = function(){
+        var t = school_details.scrollTop;
+        bottom (t)
+        flaot_d.style.top = (t/((school_details.scrollHeight - school_details.offsetHeight)/(float_line.offsetHeight - flaot_d.offsetHeight))) + "px";
+    }
+
+    //按钮变色
+    function bottom (num) {
+        if (num >= 0 && num < 1223 ) {
+            classChange(0)
+        }
+        if (num >= 1223 && num < 3229 ) {
+            classChange(1)
+        }
+        if (num >= 3229 && num < 4322 ) {
+            classChange(2)
+        }
+        if (num >= 4322 && num < 5154 ) {
+            classChange(3)
+        }
+        if (num >= 5154 && num < 6704 ) {
+            classChange(4)
+        }
+        if (num == 6704) {
+            classChange(5)
+        }
+    }
+    function classChange(numb) {
+        for (var i = 0; i < left_sid.children.length; i++) {
+            left_sid.children[i].className = "col_club_class";
+        }
+        left_sid.children[numb].className = "col_club_class_click";
+    }
+
+    //点击按钮切换
+    left_sid.addEventListener("click", function (e) {
+        if (e.target.className == "col_club_class_click") {
+            bottomCahnge(e.target, e.target.children[0].id);
+        }
+        if (e.target.className == "col_club_class") {
+            bottomCahnge(e.target, e.target.children[0].id);
+        }
+        if (e.target.className == "span_font") {
+            bottomCahnge(e.target.parentNode, e.target.id);
+        }
+    })
+    function bottomCahnge (event1, event2) {
+
+        for (var i = 0; i < left_sid.children.length; i++) {
+            left_sid.children[i].className = "col_club_class";
+        }
+        event1.className = "col_club_class_click";
+
+        switch (event2) {
+            case "tuanwei":
+                school_details.scrollTop = 0;
+                flaot_d.style.top = 0;
+                break;
+            case "col_stu_union":
+                school_details.scrollTop = 1223;
+                flaot_d.style.top = 75 + "px";
+                break;
+            case "sci_union":
+                school_details.scrollTop = 3229;
+                flaot_d.style.top = 198 + "px";
+                break;
+            case "club_union":
+                school_details.scrollTop = 4322;
+                flaot_d.style.top = 265 + "px";
+                break;
+            case "teen_volum":
+                school_details.scrollTop = 5154;
+                flaot_d.style.top = 316 + "px";
+                break;
+            case "stu_art":
+                school_details.scrollTop = 6704;
+                flaot_d.style.top = 411 + "px";
+                break;
+        }
+    }
+
+    //拖动滚动条
+    flaot_d.onmousedown = mousedown_g;
+    flaot_d.onmousemove = mousemove_g;
+    flaot_d.onmouseup = mouseup_g;
+    flaot_d.ondragstart = dragstart_g;
+    flaot_d.onmouseout = mouseout_g;
+
+
+    function mousedown_g () {
+        Y1 = window.event.y - parseInt(flaot_d.offsetTop);
+        move = 1;
+    }
+    function mousemove_g () {
+        if (move == 1) {
+            var t = school_details.scrollTop;
+            bottom (t);
+            addClass(body, "way_masking");
+            flaot_d.style.top = (window.event.y - Y1) + "px";
+            school_details.scrollTop = (((school_details.scrollHeight - school_details.offsetHeight)/(float_line.offsetHeight - flaot_d.offsetHeight))*(window.event.y - Y1));
+            if ((window.event.y - Y1) < 0) {
+                flaot_d.style.top = 0 + "px";
+                school_details.scrollTop = 0;
+            }
+            if ((window.event.y - Y1) > (float_line.offsetHeight - flaot_d.offsetHeight)) {
+                flaot_d.style.top = (float_line.offsetHeight - flaot_d.offsetHeight) + "px";
+                school_details.scrollTop = (school_details.scrollHeight - school_details.offsetHeight);
+            }
+        }
+    }
+    function mouseup_g () {
+        move = 0;
+        function _timeChange(stop) {
+            return function(){
+                removeClass(body, "way_masking");
+            }
+        };
+        setTimeout(_timeChange(stop), 1000);
+    }
+    function mouseout_g () {
+        move = 0;
+        function _timeChange(stop) {
+            return function(){
+                removeClass(body, "way_masking");
+            }
+        };
+        setTimeout(_timeChange(stop), 1000);
+    }
+    function dragstart_g (){
+        window.event.returnValue = false;
+    }
 
 })();
